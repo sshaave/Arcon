@@ -1,0 +1,31 @@
+		<set name="allEdges" type="face">
+			<item patch="1">4</item>
+			<item patch="2">4</item>
+			<item patch="3">4</item>
+			<item patch="4">4</item>
+			<item patch="8">4</item>
+			<item patch="9">4</item>
+			<item patch="10">4</item>
+			<item patch="11">4</item>
+			<item patch="21">4</item>
+			<item patch="22">4</item>
+			<item patch="23">4</item>
+			<item patch="24">4</item>
+			<item patch="33">4</item>
+			<item patch="34">4</item>
+			<item patch="35">4</item>
+			<item patch="36">4</item>
+			<item patch="37">4</item>
+			<item patch="38">4</item>
+			<item patch="39">4</item>
+			<item patch="40">4</item>
+			<item patch="42">4</item>
+			<item patch="43">4</item>
+			<item patch="44">4</item>
+			<item patch="45">4</item>
+		</set>
+		<set name="lastflate" type="face">
+			<item patch="15">6</item>
+			<item patch="19">6</item>
+			<item patch="28">6</item>
+		</set>

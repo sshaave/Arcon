@@ -1,0 +1,11 @@
+	<connection master="5" mface="3" slave="1" sface="3" orient="2"/>
+	<connection master="12" mface="1" slave="4" sface="3"/>
+	<connection master="41" mface="1" slave="36" sface="3"/>
+	<connection master="17" mface="3" slave="8" sface="3" orient="2"/>
+	<connection master="25" mface="1" slave="11" sface="3"/>
+	<connection master="12" mface="2" slave="9" sface="3" orient="2"/>
+	<connection master="30" mface="3" slave="21" sface="3" orient="2"/>
+	<connection master="25" mface="2" slave="22" sface="3" orient="2"/>
+	<connection master="41" mface="2" slave="38" sface="3" orient="2"/>
+	<connection master="46" mface="1" slave="40" sface="3"/>
+	<connection master="46" mface="2" slave="43" sface="3" orient="2"/>
