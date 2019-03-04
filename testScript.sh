@@ -36,21 +36,29 @@ l_SY=$(( yTot - dd - dd - ttol - ttol ))
 l_boltekant=$(( dd + ttol ))
 klakkLX=$(( d_dx + d_dx + l_boltekant ))
 a=0; elNum=0; l_SY2=$(( l_SY - klakkLY ))
+# this while loop will loop over the bolts, and use python scripts to generate parts of the geometries. 
+# the script merge.py will simply append the new G2 file to the assembly.
+# The geometry is created in the following manner: The first bolt is created, and the three parts directly above (vertically).
+# then the next bolt will be created, and the parts between this bolt and the former will be created ("klakk" included). Next 
+# on it will create the parts verticall above itself. Finally when it reached the uppermost (always 2nd) row of bolts, it will only
+# create the bolts and the horisontal parts between
 while [ "$a" -lt $ny ]
 do
     b=0
     while [ "$b" -lt $nx ]
     do
-        # this wil make the bolts
+        # this wil make the 4 patches of the bolts
 	python3 myPython.py $d $(( xTrans * b )) $(( yTrans * a )) $(( refi )) $(( factor )) $(( tolBolt )) $(( depth )) $refP
     elNum=$(( elNum + 4 ))
     python3 makeSetsItem.py setsItem $elNum $b $a $nx $ny
     python3 updatePatchFile.py hei123 $b $a $nx $ny false $elNum
+	# check if this is the first bolt. If yes, the file writer  will use 'w', else 'a'
 	if [ "$a" -eq 0 ] && [ "$b" -eq 0 ]
         then
             python3 merge.py total true
         else
             python3 merge.py total false
+	    # this will create the horisontal part between the bolts
             if [ "$b" -gt 0 ]
             then
 		        python3 2smallMulti.py $d_dx $l_boltekant $depth $(( xTrans * b )) $(( yTrans * a )) $d $tolX $tolY $factor $b $nx $refP
@@ -60,7 +68,7 @@ do
         fi
 	if [ "$a" -lt $(( ny - 1 )) ] && [ "$b" -gt 0 ]
 	then
-		# this will creat the middle parts (no neighbouring bolt patches)
+	# this will creat the middle parts (no neighbouring bolt patches)
         # first element
 		python3 longSquare.py $d_dx $(( l_SY2 )) $depth $d $tolX $factor elongSq $l_boltekant $(( xTrans * b )) $xTrans $klakkLY $(( l_boltekant * 2 )) $b $nx $refP
         python3 merge.py total middleSquares
@@ -119,22 +127,11 @@ done
 #python3 makeOuter.py $lengthX $tX1 $lengthY $tY1 $depth $factor $tolX $tolY $tolBolt $refi $d $tX2 $tY2 $yTot
 #python3 merge.py total outer
 #elNum=$(( elNum + 4 ))
-# Make the klakk
-#klakkRefU=2 # first element
-#python3 makeKlakk.py $l_boltekant $l_boltekant $l_SY $klakkRefU $klakkRefV $klakkRefW $d_dx $klakkLY $factor $d $tolBolt $depth first
-#python3 merge.py total klakk
-#elNum=$(( elNum + 1 ))
-#python3 makeKlakk.py $l_boltekant $((l_boltekant + l_boltekant + d_dx )) $l_SY $klakkRefU $klakkRefV $klakkRefW $d_dx $klakkLY $factor $d $tolBolt $depth last
-#python3 merge.py total klakk
-#elNum=$(( elNum + 1 ))
+# This will create a intermediate textfile used in the <connection> setting
 python3 makeLastFile.py setsItem $nx
-#python3 makeKlakk.py $l_boltekant $(( l_boltekant + d_dx )) $l_SY $(( klakkRefU - 1 )) $klakkRefV $klakkRefW $l_boltekant $klakkLY $factor $d $tolBolt $depth middle
-#python3 merge.py total klakk
-#elNum=$(( elNum + 1 ))
 # Wrap it up
 ../../Mappe/IFEM-GPM/bin/./getGNO -v G2/total.g2 | grep "<topology>\|<connection" > patchFileTemp.txt
 python3 makeFile.py resultat.xinp G2/total.g2 patchFileTemp.txt setsItem.txt $N $V $elNum 4 4 9
 #echo $elNum
-#python3 makeFile.py resultat.txt G2/samanslott.g2 patchFileTemp.txt
-#python3 updatePatchFile.py hei123 -1 -1 -1 -1 true -1
+
 
