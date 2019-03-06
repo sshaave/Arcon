@@ -20,21 +20,13 @@ with open(name,'w') as i1:
     i1.write('<!-- Geometry definitions -->\n')
     i1.write('<geometry>\n')
     i1.write('\t<patchfile>'+ patchName + '</patchfile>\n')
-#    for i in range(elNum):
-#        i1.write('\t<refine patch="'+str(i+1))
-#        i1.write('" u="'+refU)
-#        i1.write('" v="'+refV)
-#        i1.write('" w="'+refW)
-#        i1.write('"/>\n')
     i1.write('\t<refine lowerpatch="1" u="'+refU)
     i1.write('" v="'+refV)
     i1.write('" w="'+refW)
     i1.write('"/>\n')
-    with open(topFile) as t1:
+    i1.write('\t<topology>\n')
+    with open('con.txt') as t1:
         for line in t1:
-            i1.write("\t"+line)
-    with open(top2File) as t2:
-        for line in t2:
             i1.write("\t"+line)
     i1.write('\t</topology>\n')
     i1.write('\t<topologysets>\n')
