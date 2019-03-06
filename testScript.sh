@@ -131,5 +131,7 @@ done
 python3 makeLastFile.py setsItem $nx
 # Wrap it up
 ../../Mappe/IFEM-GPM/bin/./getGNO -v G2/total.g2 | grep "<connection" > patchFileTemp.txt
-python3 makeFile.py resultat.xinp G2/total.g2 patchFileTemp.txt setsItem.txt $N $V $elNum 3 3 8
+python3 qMerge.py
+python3 qSort.py
+python3 makeFile.py resultat.xinp G2/total.g2 setsItem.txt $N $V $elNum 3 3 8
 #echo $elNum
