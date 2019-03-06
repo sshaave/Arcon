@@ -130,7 +130,7 @@ done
 # This will create a intermediate textfile used in the <connection> setting
 python3 makeLastFile.py setsItem $nx
 # Wrap it up
-../../Mappe/IFEM-GPM/bin/./getGNO -v G2/total.g2 | grep "<topology>\|<connection" > patchFileTemp.txt
+../../Mappe/IFEM-GPM/bin/./getGNO -v G2/total.g2 | grep "<connection" > patchFileTemp.txt
 python3 makeFile.py resultat.xinp G2/total.g2 patchFileTemp.txt setsItem.txt $N $V $elNum 3 3 8
 #echo $elNum
 
