@@ -1,0 +1,69 @@
+    <connection master="5" mface="3" slave="1" sface="3" orient="2"/>
+    <connection master="12" mface="1" slave="4" sface="3"/>
+    <connection master="41" mface="1" slave="36" sface="3"/>
+    <connection master="17" mface="3" slave="8" sface="3" orient="2"/>
+    <connection master="25" mface="1" slave="11" sface="3"/>
+    <connection master="12" mface="2" slave="9" sface="3" orient="2"/>
+    <connection master="30" mface="3" slave="21" sface="3" orient="2"/>
+    <connection master="25" mface="2" slave="22" sface="3" orient="2"/>
+    <connection master="41" mface="2" slave="38" sface="3" orient="2"/>
+    <connection master="46" mface="1" slave="40" sface="3"/>
+    <connection master="46" mface="2" slave="43" sface="3" orient="2"/>
+    <connection master="44" mface="2" slave="45" sface="1"/>
+    <connection master="43" mface="2" slave="44" sface="1"/>
+    <connection master="42" mface="2" slave="43" sface="1"/>
+    <connection master="42" mface="1" slave="45" sface="2"/>
+    <connection master="39" mface="2" slave="40" sface="1"/>
+    <connection master="38" mface="2" slave="39" sface="1"/>
+    <connection master="37" mface="2" slave="38" sface="1"/>
+    <connection master="37" mface="1" slave="40" sface="2"/>
+    <connection master="35" mface="2" slave="36" sface="1"/>
+    <connection master="34" mface="2" slave="35" sface="1"/>
+    <connection master="33" mface="2" slave="34" sface="1"/>
+    <connection master="33" mface="1" slave="36" sface="2"/>
+    <connection master="32" mface="4" slave="44" sface="3"/>
+    <connection master="31" mface="4" slave="32" sface="3"/>
+    <connection master="30" mface="4" slave="31" sface="3"/>
+    <connection master="29" mface="4" slave="46" sface="3"/>
+    <connection master="29" mface="2" slave="32" sface="1"/>
+    <connection master="27" mface="6" slave="28" sface="5"/>
+    <connection master="27" mface="4" slave="29" sface="3"/>
+    <connection master="27" mface="2" slave="31" sface="1"/>
+    <connection master="26" mface="4" slave="27" sface="3"/>
+    <connection master="26" mface="2" slave="30" sface="1"/>
+    <connection master="25" mface="4" slave="26" sface="3"/>
+    <connection master="23" mface="2" slave="24" sface="1"/>
+    <connection master="22" mface="2" slave="23" sface="1"/>
+    <connection master="21" mface="2" slave="22" sface="1"/>
+    <connection master="21" mface="1" slave="24" sface="2"/>
+    <connection master="20" mface="4" slave="39" sface="3"/>
+    <connection master="20" mface="2" slave="29" sface="1"/>
+    <connection master="19" mface="2" slave="28" sface="1"/>
+    <connection master="18" mface="6" slave="19" sface="5"/>
+    <connection master="18" mface="4" slave="20" sface="3"/>
+    <connection master="18" mface="2" slave="27" sface="1"/>
+    <connection master="17" mface="4" slave="18" sface="3"/>
+    <connection master="17" mface="2" slave="26" sface="1"/>
+    <connection master="16" mface="4" slave="41" sface="3"/>
+    <connection master="16" mface="2" slave="20" sface="1"/>
+    <connection master="15" mface="2" slave="19" sface="1"/>
+    <connection master="14" mface="6" slave="15" sface="5"/>
+    <connection master="14" mface="4" slave="16" sface="3"/>
+    <connection master="14" mface="2" slave="18" sface="1"/>
+    <connection master="13" mface="4" slave="14" sface="3"/>
+    <connection master="13" mface="2" slave="17" sface="1"/>
+    <connection master="12" mface="4" slave="13" sface="3"/>
+    <connection master="10" mface="2" slave="11" sface="1"/>
+    <connection master="9" mface="2" slave="10" sface="1"/>
+    <connection master="8" mface="2" slave="9" sface="1"/>
+    <connection master="8" mface="1" slave="11" sface="2"/>
+    <connection master="7" mface="4" slave="35" sface="3"/>
+    <connection master="7" mface="2" slave="16" sface="1"/>
+    <connection master="6" mface="4" slave="7" sface="3"/>
+    <connection master="6" mface="2" slave="14" sface="1"/>
+    <connection master="5" mface="4" slave="6" sface="3"/>
+    <connection master="5" mface="2" slave="13" sface="1"/>
+    <connection master="3" mface="2" slave="4" sface="1"/>
+    <connection master="2" mface="2" slave="3" sface="1"/>
+    <connection master="1" mface="2" slave="2" sface="1"/>
+    <connection master="1" mface="1" slave="4" sface="2"/>
