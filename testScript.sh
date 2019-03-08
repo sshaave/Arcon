@@ -1,20 +1,26 @@
 #!/bin/sh
-# 28feb kl 16
+# 8 mars kl 13
 echo ls
+# Define the forces
 N=2000;V=500
+# Define the refinement scheme, refP - refinement of polynomial degree
 refi=1; refVmidtre=1; refV=1;refP=2
-factor=15 #this number has to be divided by 10  (workaround for bash not handling decimals)
-lengthX=60;lengthY=34;klakkLength=15;klakkY=13;klakkRefV=1;klakkRefW=0;klakkRefU=1;klakkLY=1
+# Define the geometry and refinement of the klakk
+lengthX=60;lengthY=34:klakkLength=15;klakkY=13
+klakkRefV=1;klakkRefW=0;klakkRefU=1;klakkLY=1
+# Plate geometry definitions
 xTot=54;yTot=30;tY1=4;tY2=2;tX1=1;tX2=3
 nx=3;ny=2;d=2;depth=3;totalEle=$(( nx * ny * 4 ))
 vE=$(( nx * 3 ))
 n2x=$(( nx - 1 ))
 nKlakk=$(( n2x * 2 ))
 nKlakk=$(( nKlakk - 1 ))
-#echo $nKlakk
+# the "factor" variable is determines the thickness of the patch around the bolt hole. factor=15 equals 1.5 of d
+factor=15 #this number has to be divided by 10  (workaround for bash not handling decimals)
+# Calculating variables for the geometri
 hE=$(( n2x * 5 ))
 totalEle=$(( totalEle + nKlakk + hE + vE ))
-tolX=0;tolY=0;tolBolt=0
+tolX=0;tolY=0;tolBolt=0 # variables used to increase the thickness/length of the bolt hole patch
 dd=0;ttol=0;d_dx=0; xTrans=0;d_dy=0
 yTrans=0; l_SY=0; l_SX=0
 gamma1=0; gamma1=$(( nx - 1 ))
@@ -36,10 +42,10 @@ l_SY=$(( yTot - dd - dd - ttol - ttol ))
 l_boltekant=$(( dd + ttol ))
 klakkLX=$(( d_dx + d_dx + l_boltekant ))
 a=0; elNum=0; l_SY2=$(( l_SY - klakkLY ))
-# this while loop will loop over the bolts, and use python scripts to generate parts of the geometries. 
+# this while loop will loop over the bolts, and use python scripts to generate parts of the geometries.
 # the script merge.py will simply append the new G2 file to the assembly.
 # The geometry is created in the following manner: The first bolt is created, and the three parts directly above (vertically).
-# then the next bolt will be created, and the parts between this bolt and the former will be created ("klakk" included). Next 
+# then the next bolt will be created, and the parts between this bolt and the former will be created ("klakk" included). Next
 # on it will create the parts verticall above itself. Finally when it reached the uppermost (always 2nd) row of bolts, it will only
 # create the bolts and the horisontal parts between
 while [ "$a" -lt $ny ]
@@ -123,10 +129,6 @@ do
     a=$(( a + 1 ))
 done
 
-# Make the outer parts/circumference of the plate
-#python3 makeOuter.py $lengthX $tX1 $lengthY $tY1 $depth $factor $tolX $tolY $tolBolt $refi $d $tX2 $tY2 $yTot
-#python3 merge.py total outer
-#elNum=$(( elNum + 4 ))
 # This will create a intermediate textfile used in the <connection> setting
 python3 makeLastFile.py setsItem $nx
 # Wrap it up
