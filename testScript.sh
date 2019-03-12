@@ -2,15 +2,15 @@
 # 8 mars kl 13
 echo ls
 # Define the forces
-N=2000;V=500
+N=112;V=0
 # Define the refinement scheme, refP - refinement of polynomial degree
 refi=1; refVmidtre=1; refV=1;refP=2
 # Define the geometry and refinement of the klakk
-lengthX=60;lengthY=34:klakkLength=15;klakkY=13
-klakkRefV=1;klakkRefW=0;klakkRefU=1;klakkLY=1
+klakkLength=60;klakkY=13
+klakkRefV=1;klakkRefW=0;klakkRefU=1;klakkLY=10
 # Plate geometry definitions
-xTot=54;yTot=30;tY1=4;tY2=2;tX1=1;tX2=3
-nx=3;ny=2;d=2;depth=3;totalEle=$(( nx * ny * 4 ))
+xTot=180;yTot=150 #;tY1=4;tY2=2;tX1=1;tX2=3
+nx=2;ny=2;d=2;depth=10;totalEle=$(( nx * ny * 4 ))
 vE=$(( nx * 3 ))
 n2x=$(( nx - 1 ))
 nKlakk=$(( n2x * 2 ))
@@ -92,7 +92,7 @@ do
         if [ "$b" -gt 0 ] && [ "$b" -lt $nx ]
         then
             tempTransX=$(( xTrans * b ))
-            python3 makeKlakk.py $l_boltekant $(( tempTransX - d_dx )) $l_SY2 $klakkRefU $klakkRefV $klakkRefW $d_dx $klakkLY $factor $d $tolBolt $depth $b $nx $refP
+            python3 makeKlakk.py $l_boltekant $(( tempTransX - d_dx )) $l_SY2 $klakkRefU $klakkRefV $klakkRefW $d_dx $klakkLY $factor $d $tolBolt $depth $b $nx $refP $klakkLength
             python3 merge.py total klakk
             elNum=$(( elNum + 1 ))
         fi
@@ -115,7 +115,7 @@ do
 		if [ "$b" -gt 0 ] && [ "$b" -lt $n2x ]
 		then
             # make the klakk which is places over the vertical parts
-	    	python3 makeKlakk.py $l_boltekant $(( xTrans * b )) $l_SY2 $(( klakkRefU )) $klakkRefV $klakkRefW $l_boltekant $klakkLY $factor $d $tolBolt $depth 0 $nx $refP
+	    	python3 makeKlakk.py $l_boltekant $(( xTrans * b )) $l_SY2 $(( klakkRefU )) $klakkRefV $klakkRefW $l_boltekant $klakkLY $factor $d $tolBolt $depth 0 $nx $refP $klakkLength
             elNum=$(( elNum + 1 ))
             python3 merge.py total klakk
 		fi

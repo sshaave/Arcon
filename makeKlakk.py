@@ -23,6 +23,7 @@ from math import pi
 # 13th input: tellevariabel for nx
 # 14th input: nx
 # 15th input: refP
+# 16th input: klakkLength Z-dir
 #Handling input
 l_boltekant = int(float(sys.argv[1]))
 delX = int(float(sys.argv[2])) # l_boltekant
@@ -39,11 +40,12 @@ pDepth = int(float(sys.argv[12]))
 bNx = int(float(sys.argv[13]))
 nx = int(float(sys.argv[14]))
 refP = int(float(sys.argv[15]))
+klakkLengthZ = int(float(sys.argv[16]))
 #
 dX = factor*d + tolBolt
 s1 = sf.square(size=(lX,lY))
 #s1.raise_order(refP)
-v1 = vf.extrude(s1,amount=(0,0,6))
+v1 = vf.extrude(s1,amount=(0,0,klakkLengthZ))
 v1.raise_order(refP)
 #
 l_SY = delYY
