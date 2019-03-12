@@ -4,15 +4,15 @@ import sys
 import os
 name = sys.argv[1]
 patchName = sys.argv[2]
-topFile = sys.argv[3]
-top2File='hei123.txt'
-setFile = sys.argv[4]
-strekk = sys.argv[5]
-V = sys.argv[6]
-elNum=int(float(sys.argv[7]))
-refU=sys.argv[8]
-refV=sys.argv[9]
-refW=sys.argv[10]
+#topFile = sys.argv[3]
+#top2File='hei123.txt'
+setFile = sys.argv[3]
+strekk = sys.argv[4]
+V = sys.argv[5]
+elNum=int(float(sys.argv[6]))
+refU=sys.argv[7]
+refV=sys.argv[8]
+refW=sys.argv[9]
 with open(name,'w') as i1:
     i1.write('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n\n')
     i1.write('<!-- automatically generated file from script for Arcon Prosjekt AS. !-->\n\n')
