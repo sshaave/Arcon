@@ -54,10 +54,10 @@ do
     while [ "$b" -lt $nx ]
     do
         # this wil make the 4 patches of the bolts
-	python3 myPython.py $d $(( xTrans * b )) $(( yTrans * a )) $(( refi )) $(( factor )) $(( tolBolt )) $(( depth )) $refP
+	python3 makeBolt.py $d $(( xTrans * b )) $(( yTrans * a )) $(( refi )) $(( factor )) $(( tolBolt )) $(( depth )) $refP
     elNum=$(( elNum + 4 ))
-    python3 makeSetsItem.py setsItem $elNum $b $a $nx $ny
-    python3 updatePatchFile.py hei123 $b $a $nx $ny false $elNum
+    python3 makeSetsItem.py tempFiles/setsItem $elNum $b $a $nx $ny
+    python3 updatePatchFile.py tempFiles/updatePatchFile $b $a $nx $ny false $elNum
 	# check if this is the first bolt. If yes, the file writer  will use 'w', else 'a'
 	if [ "$a" -eq 0 ] && [ "$b" -eq 0 ]
         then
@@ -130,10 +130,10 @@ do
 done
 
 # This will create a intermediate textfile used in the <connection> setting
-python3 makeLastFile.py setsItem $nx
+python3 makeLastFile.py tempFiles/setsItem $nx
 # Wrap it up
-../../Mappe/IFEM-GPM/bin/./getGNO -v G2/total.g2 | grep "<connection" > patchFileTemp.txt
+../../Mappe/IFEM-GPM/bin/./getGNO -v G2/total.g2 | grep "<connection" > tempFiles/patchFileTemp.txt
 python3 qMerge.py
 python3 qSort.py
-python3 makeFile.py resultat.xinp G2/total.g2 setsItem.txt $N $V $elNum 3 3 8
+python3 makeFile.py resultat.xinp G2/total.g2 tempFiles/setsItem.txt $N $V $elNum 3 3 8
 #echo $elNum

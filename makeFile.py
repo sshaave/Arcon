@@ -4,8 +4,6 @@ import sys
 import os
 name = sys.argv[1]
 patchName = sys.argv[2]
-#topFile = sys.argv[3]
-#top2File='hei123.txt'
 setFile = sys.argv[3]
 strekk = sys.argv[4]
 V = sys.argv[5]
@@ -25,7 +23,7 @@ with open(name,'w') as i1:
     i1.write('" w="'+refW)
     i1.write('"/>\n')
     i1.write('\t<topology>\n')
-    with open('con.txt') as t1:
+    with open('tempFiles/con.txt') as t1:
         for line in t1:
             i1.write("\t"+line)
     i1.write('\t</topology>\n')
