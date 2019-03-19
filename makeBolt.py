@@ -18,6 +18,7 @@ from math import pi
 # 6th input: tol
 # 7th input: depth
 # 8th input: ref pol-degree
+# 9th input: tellevariabel for ny
 # handling input variables, converting from string to int
 d = int(float(sys.argv[1]))
 distX = int(float(sys.argv[2]))
@@ -27,34 +28,42 @@ factor = float(sys.argv[5])/10
 tol = int(float(sys.argv[6]))
 depth = int(float(sys.argv[7]))
 refP = int(float(sys.argv[8]))
+a = int(float(sys.argv[9]))
 #
 line3 = cf.line([-factor*d-tol,factor*d+tol], [-factor*d-tol,-factor*d-tol])
 arc = cf.circle_segment(pi/2,r=d)
 arc.rotate(3*pi/4, normal=(0,0,1))
 surf = sf.edge_curves(line3,arc)
 surf.rotate(3*pi/2, normal=(0,0,1))
+#
 s1 = vf.extrude(surf, amount=(0,0,depth))
 s1.raise_order(refP-1,refP-1,refP)
 #s1.raise_order(1)
-s1.refine(refi,direction='u')
-s1.refine(refi,direction='v')
+if a == 0:
+    s1.refine(refi+1,direction='u')
+else:
+    s1.refine(refi,direction='u')
+s1.refine(refi+1,direction='v')
 #
 s2 = vf.extrude(surf, amount=(0,0,depth))
 s2.raise_order(refP-1,refP-1,refP)
 s2.refine(refi,direction='u')
-s2.refine(refi,direction='v')
+s2.refine(refi+1,direction='v')
 s2.rotate(pi/2,normal=(0,0,1))
 #
 s3 = vf.extrude(surf,amount=(0,0,depth))
 s3.raise_order(refP-1,refP-1,refP)
-s3.refine(refi,direction='u')
-s3.refine(refi,direction='v')
+if a==1:
+    s3.refine(refi+1,direction='u')
+else:
+    s3.refine(refi,direction='u')
+s3.refine(refi+1,direction='v')
 s3.rotate(pi,normal=(0,0,1))
 #
 s4 = vf.extrude(surf,amount=(0,0,depth))
 s4.raise_order(refP-1,refP-1,refP)
 s4.refine(refi,direction='u')
-s4.refine(refi,direction='v')
+s4.refine(refi+1,direction='v')
 s4.rotate(3*pi/2,normal=(0,0,1))
 
 if distX > 0 or distY > 0:

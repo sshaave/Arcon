@@ -1,14 +1,20 @@
 #!/bin/sh
-# 8 mars kl 13
-echo ls
-# Define the forces
+# endret sist 19 mars kl 13
+
+# ----- Part 1: define the problem ------
+#   Define the forces
+#   N = tension if positive
+#   V = shear in XZ
 N=112;V=0
-# Define the refinement scheme, refP - refinement of polynomial degree
-refi=1; refVmidtre=1; refV=1;refP=2
-# Define the geometry and refinement of the klakk
+#   Define the refinement scheme
+#   refi= refinement scheme of bolt done by the scripts
+#   refV = refinement in Y-dir done by the script
+#   refP = polynomial refinement
+refi=0;refV=0;refP=2
+#   Define the geometry and refinement of the klakk
 klakkLength=60;klakkY=13
-klakkRefV=1;klakkRefW=0;klakkRefU=1;klakkLY=10
-# Plate geometry definitions
+klakkRefV=1;klakkRefW=0;klakkRefU=0;klakkLY=10
+#   Plate geometry definitions
 xTot=180;yTot=150 #;tY1=4;tY2=2;tX1=1;tX2=3
 nx=2;ny=2;d=2;depth=10;totalEle=$(( nx * ny * 4 ))
 vE=$(( nx * 3 ))
@@ -54,7 +60,7 @@ do
     while [ "$b" -lt $nx ]
     do
         # this wil make the 4 patches of the bolts
-	python3 makeBolt.py $d $(( xTrans * b )) $(( yTrans * a )) $(( refi )) $(( factor )) $(( tolBolt )) $(( depth )) $refP
+	python3 makeBolt.py $d $(( xTrans * b )) $(( yTrans * a )) $(( refi )) $(( factor )) $(( tolBolt )) $(( depth )) $refP $a
     elNum=$(( elNum + 4 ))
     python3 makeSetsItem.py tempFiles/setsItem $elNum $b $a $nx $ny
     python3 updatePatchFile.py tempFiles/updatePatchFile $b $a $nx $ny false $elNum

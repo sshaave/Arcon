@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#This script will create the elongated square between the two row of bolts
+#This script will create the elongated square between the vertical row of bolts
 import sys
 from sys import path
 path.append('../../Mappe/Splipy/')
@@ -47,13 +47,16 @@ sq1 = vf.extrude(square1,amount=(0,0,depth))
 # Refinements. k-refinement is preferred, and is achieved by order elevation before knot insertions
 sq1.raise_order(refP)
 #sq1.refine(1)
-if b==1:
+if nx==2:
+    sq1.insert_knot(0.15,direction=0)
+    sq1.insert_knot(0.85,direction=0)
+elif b==1:
     sq1.insert_knot(0.15,direction=0)
 elif b==(nx-1):
     sq1.insert_knot(0.85,direction=0)
-sq1.refine(1,direction='u') #3
 if yL > klakkLY + 1:
-    sq1.refine(1,direction='v')
+    print("hei")
+#    sq1.refine(1,direction='v')
 else:
     sq1.refine(1,direction='v')
 #sq1.refine(2,direction='w')

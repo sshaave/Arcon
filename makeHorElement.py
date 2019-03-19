@@ -38,15 +38,13 @@ refP = int(float(sys.argv[12]))
 square1 = sf.square(size=(xL,yL))
 sq1 = vf.extrude(square1, amount=(0,0,depth))
 sq1.raise_order(refP)
-#sq1.raise_order(1)
-if b==1:
+if nx==2:
+    sq1.insert_knot(0.15,direction=0)
+    sq1.insert_knot(0.85,direction=0)
+elif b==1:
     sq1.insert_knot(0.15,direction=0)
 elif b==(nx-1):
     sq1.insert_knot(0.85,direction=0)
-sq1.refine(1,direction='u') #3
-sq1.refine(1,direction='v') #2
-#sq1.refine(2,direction='w')
-#sq1.refine(2,direction='v')
 modX = factor*d + xTol
 modY = factor*d + yTol
 sq1.translate((dX,dY,0))

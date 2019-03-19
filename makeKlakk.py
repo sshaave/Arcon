@@ -56,7 +56,10 @@ v1.translate((delX,delY,0))
 #v1.raise_order(1)
 #locally refining
 v1.insert_knot(0.125,direction=2)
-if bNx==1:
+if nx==2:
+    v1.insert_knot(0.15,direction=0)
+    v1.insert_knot(0.85,direction=0)
+elif bNx==1:
     v1.insert_knot(0.15,direction=0)
 elif bNx==(nx-1):
     v1.insert_knot(0.85,direction=0)
