@@ -67,7 +67,7 @@ do
 	    # this will create the horisontal part between the bolts
             if [ "$b" -gt 0 ]
             then
-		        python3 2smallMulti.py $d_dx $l_boltekant $depth $(( xTrans * b )) $(( yTrans * a )) $d $tolX $tolY $factor $b $nx $refP
+		        python3 makeHorElement.py $d_dx $l_boltekant $depth $(( xTrans * b )) $(( yTrans * a )) $d $tolX $tolY $factor $b $nx $refP
                 python3 merge.py total multi
                 elNum=$(( elNum + 1 ))
             fi
