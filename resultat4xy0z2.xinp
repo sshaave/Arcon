@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!-- automatically generated file from script for Arcon Prosjekt AS. !-->
+
+<simulation>
+
+<!-- Geometry definitions -->
+<geometry>
+	<patchfile>G2/total.g2</patchfile>
+	<refine lowerpatch="1" u="3" v="3" w="10"/>
+	<topology>
+	    <connection master="1" mface="2" slave="2" sface="1"/>
+	    <connection master="1" mface="1" slave="4" sface="2"/>
+	    <connection master="2" mface="2" slave="3" sface="1"/>
+	    <connection master="3" mface="2" slave="4" sface="1"/>
+		<connection master="5" mface="3" slave="1" sface="3" orient="2"/>
+	    <connection master="5" mface="4" slave="6" sface="3"/>
+	    <connection master="5" mface="2" slave="13" sface="1"/>
+	    <connection master="6" mface="4" slave="7" sface="3"/>
+	    <connection master="6" mface="2" slave="14" sface="1"/>
+	    <connection master="7" mface="4" slave="22" sface="3"/>
+	    <connection master="7" mface="2" slave="16" sface="1"/>
+	    <connection master="8" mface="2" slave="9" sface="1"/>
+	    <connection master="8" mface="1" slave="11" sface="2"/>
+	    <connection master="9" mface="2" slave="10" sface="1"/>
+	    <connection master="10" mface="2" slave="11" sface="1"/>
+		<connection master="12" mface="1" slave="4" sface="3"/>
+		<connection master="12" mface="2" slave="9" sface="3" orient="2"/>
+	    <connection master="12" mface="4" slave="13" sface="3"/>
+	    <connection master="13" mface="4" slave="14" sface="3"/>
+	    <connection master="13" mface="2" slave="17" sface="1"/>
+	    <connection master="14" mface="6" slave="15" sface="5"/>
+	    <connection master="14" mface="4" slave="16" sface="3"/>
+	    <connection master="14" mface="2" slave="18" sface="1"/>
+	    <connection master="16" mface="4" slave="28" sface="3"/>
+	    <connection master="16" mface="2" slave="19" sface="1"/>
+		<connection master="17" mface="3" slave="8" sface="3" orient="2"/>
+	    <connection master="17" mface="4" slave="18" sface="3"/>
+	    <connection master="18" mface="4" slave="19" sface="3"/>
+	    <connection master="19" mface="4" slave="26" sface="3"/>
+	    <connection master="20" mface="2" slave="21" sface="1"/>
+	    <connection master="20" mface="1" slave="23" sface="2"/>
+	    <connection master="21" mface="2" slave="22" sface="1"/>
+	    <connection master="22" mface="2" slave="23" sface="1"/>
+	    <connection master="24" mface="2" slave="25" sface="1"/>
+	    <connection master="24" mface="1" slave="27" sface="2"/>
+	    <connection master="25" mface="2" slave="26" sface="1"/>
+	    <connection master="26" mface="2" slave="27" sface="1"/>
+		<connection master="28" mface="1" slave="23" sface="3"/>
+		<connection master="28" mface="2" slave="25" sface="3" orient="2"/>
+	</topology>
+	<topologysets>
+		<set name="allEdges" type="face">
+			<item patch="1">4</item>
+			<item patch="2">4</item>
+			<item patch="3">4</item>
+			<item patch="4">4</item>
+			<item patch="8">4</item>
+			<item patch="9">4</item>
+			<item patch="10">4</item>
+			<item patch="11">4</item>
+			<item patch="20">4</item>
+			<item patch="21">4</item>
+			<item patch="22">4</item>
+			<item patch="23">4</item>
+			<item patch="24">4</item>
+			<item patch="25">4</item>
+			<item patch="26">4</item>
+			<item patch="27">4</item>
+		</set>
+		<set name="lastflate" type="face">
+			<item patch="15">6</item>
+		</set>
+	</topologysets>
+</geometry>
+
+<!-- Gauss quadrature scheme !-->
+<discretization>
+	<nGauss default="0"/>
+</discretization>
+
+<!-- Boundary conditions !-->
+<boundaryconditions>
+	<dirichlet set="allEdges" comp="123"/>
+	<neumann set="lastflate" direction="3" type="constant">112</neumann>
+	<neumann set="lastflate" direction="1" type="constant">0</neumann>
+</boundaryconditions>
+
+<!-- Problem specific block !-->
+<elasticity>
+	<isotropic E="2.1e5" nu="0.3" rho="7850e-6"/>
+</elasticity>
+
+</simulation>
