@@ -90,10 +90,7 @@ do
         python3 longSquare.py $d_dx $(( 2 * klakkLY )) $depth $d $tolX $factor elongSq $l_boltekant $(( xTrans * b )) $xTrans $klakkLY $(( l_boltekant + l_boltekant + l_SY2 )) $b $nx $refP
         python3 merge.py total middleSquares
         elNum=$(( elNum + 1 ))
-	    #echo $elNum
-	    #echo $a $b
 	    tempNum=$(( totalEle - nx + b ))
-	    #echo $tempNum
         # make the klakk which is places over the middle squares
         if [ "$b" -gt 0 ] && [ "$b" -lt $nx ]
         then
@@ -136,7 +133,7 @@ do
 done
 
 # This will create a intermediate textfile used in the <connection> setting
-python3 makeLastFile.py tempFiles/setsItem $nx
+python3 makeLoadFile.py tempFiles/setsItem $nx
 # Wrap it up
 ../../Mappe/IFEM-GPM/bin/./getGNO -v G2/total.g2 | grep "<connection" > tempFiles/patchFileTemp.txt
 python3 qMerge.py
