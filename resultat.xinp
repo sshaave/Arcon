@@ -7,7 +7,9 @@
 <!-- Geometry definitions -->
 <geometry>
 	<patchfile>G2/total.g2</patchfile>
-	<refine lowerpatch="1" u="3" v="3" w="8"/>
+	<refine lowerpatch="1" upperpatch="14" u="7" v="7" w="3"/>
+    <refine patch="15" u="7" v="7" w="3"/>
+    <refine lowerpatch="16" u="7" v="7" w="3"/>
 	<topology>
 	    <connection master="1" mface="2" slave="2" sface="1"/>
 	    <connection master="1" mface="1" slave="4" sface="2"/>

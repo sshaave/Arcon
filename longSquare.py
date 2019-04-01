@@ -54,12 +54,12 @@ elif b==1:
     sq1.insert_knot(0.15,direction=0)
 elif b==(nx-1):
     sq1.insert_knot(0.85,direction=0)
-if yL > klakkLY + 1:
+#if yL > klakkLY + 1:
     # do nothing
-    depth = depth + 1 - 1
+#    depth = depth + 1 - 1
 #    sq1.refine(1,direction='v')
-else:
-    sq1.refine(1,direction='v')
+#else:
+#    sq1.refine(1,direction='v')
 #sq1.refine(2,direction='w')
 # make the knot insertion at the point of the klakk
 #lower = 0.5 - klakkLY/(yL*2)

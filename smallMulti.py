@@ -41,8 +41,8 @@ sq1.raise_order(refP)
 sq1.refine(1,direction='u')
 if yL > klakkLY + 1:
     sq1.refine(refV,direction='v') #2
-else:
-    sq1.refine(1,direction='v')
+#else:
+#    sq1.refine(1,direction='v')
 #sq1.refine(2,direction='w')
 # make the knot insertion at the point of the klakk
 #lower = 0.5 - klakkLY/(yL*2)

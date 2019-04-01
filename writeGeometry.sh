@@ -13,7 +13,7 @@ N=112;V=0
 refi=0;refV=0;refP=2
 #   Define the geometry and refinement of the klakk
 klakkLength=60;klakkY=13
-klakkRefV=1;klakkRefW=0;klakkRefU=0;klakkLY=10
+klakkRefV=0;klakkRefW=0;klakkRefU=0;klakkLY=10
 #   Plate geometry definitions
 xTot=180;yTot=150 #;tY1=4;tY2=2;tX1=1;tX2=3
 nx=2;ny=2;d=2;depth=10;totalEle=$(( nx * ny * 4 ))
