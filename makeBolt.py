@@ -38,8 +38,9 @@ surf.rotate(3*pi/2, normal=(0,0,1))
 #
 s1 = vf.extrude(surf, amount=(0,0,depth))
 s1.raise_order(refP-1,refP-1,refP)
+#s1.refine(1)
 #s1.raise_order(1)
-if a == 0:
+if a == 30000:
     s1.refine(refi+1,direction='u')
 else:
     s1.refine(refi,direction='u')
@@ -53,7 +54,7 @@ s2.rotate(pi/2,normal=(0,0,1))
 #
 s3 = vf.extrude(surf,amount=(0,0,depth))
 s3.raise_order(refP-1,refP-1,refP)
-if a==1:
+if a==10000:
     s3.refine(refi+1,direction='u')
 else:
     s3.refine(refi,direction='u')

@@ -21,6 +21,12 @@ elif sys.argv[2] == 'outer':
 elif sys.argv[2] == 'klakk':
     with open('G2/'+sys.argv[1]+'.g2','a') as i1:
         with open('G2/klakk.g2','r') as i2: i1.write(i2.read())
+elif sys.argv[2] == 'claw':
+    with open('G2/'+sys.argv[1]+'.g2','a') as i1:
+        with open('G2/claw1.g2','r') as i2: i1.write(i2.read()+'\n')
+        with open('G2/claw2.g2','r') as i3: i1.write(i3.read()+'\n')
+        with open('G2/claw3.g2','r') as i4: i1.write(i4.read()+'\n')
+        with open('G2/claw4.g2','r') as i5: i1.write(i5.read())
 else:
     with open('G2/'+sys.argv[1]+'.g2','a') as i1:
         with open('G2/1Test.g2','r') as i2: i1.write(i2.read()+'\n')

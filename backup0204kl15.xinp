@@ -7,16 +7,12 @@
 <!-- Geometry definitions -->
 <geometry>
 	<patchfile>G2/total.g2</patchfile>
-	<refine lowerpatch="1" u="3" v="3" w="8"/>
+	<refine lowerpatch="1" u="4" v="4" w="3"/>
 	<topology>
-	    <connection master="1" mface="4" slave="29" sface="1" orient="1"/>
 	    <connection master="1" mface="2" slave="2" sface="1"/>
 	    <connection master="1" mface="1" slave="4" sface="2"/>
-	    <connection master="2" mface="4" slave="30" sface="1" orient="1"/>
 	    <connection master="2" mface="2" slave="3" sface="1"/>
-	    <connection master="3" mface="4" slave="31" sface="1" orient="1"/>
 	    <connection master="3" mface="2" slave="4" sface="1"/>
-	    <connection master="4" mface="4" slave="32" sface="1" orient="1"/>
 		<connection master="5" mface="3" slave="1" sface="3" orient="2"/>
 	    <connection master="5" mface="4" slave="6" sface="3"/>
 	    <connection master="5" mface="2" slave="13" sface="1"/>
@@ -24,14 +20,10 @@
 	    <connection master="6" mface="2" slave="14" sface="1"/>
 	    <connection master="7" mface="4" slave="22" sface="3"/>
 	    <connection master="7" mface="2" slave="16" sface="1"/>
-	    <connection master="8" mface="4" slave="33" sface="1" orient="1"/>
 	    <connection master="8" mface="2" slave="9" sface="1"/>
 	    <connection master="8" mface="1" slave="11" sface="2"/>
-	    <connection master="9" mface="4" slave="34" sface="1" orient="1"/>
 	    <connection master="9" mface="2" slave="10" sface="1"/>
-	    <connection master="10" mface="4" slave="35" sface="1" orient="1"/>
 	    <connection master="10" mface="2" slave="11" sface="1"/>
-	    <connection master="11" mface="4" slave="36" sface="1" orient="1"/>
 		<connection master="12" mface="1" slave="4" sface="3"/>
 		<connection master="12" mface="2" slave="9" sface="3" orient="2"/>
 	    <connection master="12" mface="4" slave="13" sface="3"/>
@@ -46,71 +38,79 @@
 	    <connection master="17" mface="4" slave="18" sface="3"/>
 	    <connection master="18" mface="4" slave="19" sface="3"/>
 	    <connection master="19" mface="4" slave="26" sface="3"/>
-	    <connection master="20" mface="4" slave="37" sface="1" orient="1"/>
 	    <connection master="20" mface="2" slave="21" sface="1"/>
 	    <connection master="20" mface="1" slave="23" sface="2"/>
-	    <connection master="21" mface="4" slave="38" sface="1" orient="1"/>
 	    <connection master="21" mface="2" slave="22" sface="1"/>
-	    <connection master="22" mface="4" slave="39" sface="1" orient="1"/>
 	    <connection master="22" mface="2" slave="23" sface="1"/>
-	    <connection master="23" mface="4" slave="40" sface="1" orient="1"/>
-	    <connection master="24" mface="4" slave="41" sface="1" orient="1"/>
 	    <connection master="24" mface="2" slave="25" sface="1"/>
 	    <connection master="24" mface="1" slave="27" sface="2"/>
-	    <connection master="25" mface="4" slave="42" sface="1" orient="1"/>
 	    <connection master="25" mface="2" slave="26" sface="1"/>
-	    <connection master="26" mface="4" slave="43" sface="1" orient="1"/>
 	    <connection master="26" mface="2" slave="27" sface="1"/>
-	    <connection master="27" mface="4" slave="44" sface="1" orient="1"/>
 		<connection master="28" mface="1" slave="23" sface="3"/>
 		<connection master="28" mface="2" slave="25" sface="3" orient="2"/>
+		<connection master="29" mface="1" slave="1" sface="4" orient="1"/>
 	    <connection master="29" mface="4" slave="30" sface="3"/>
 	    <connection master="29" mface="3" slave="32" sface="4"/>
 	    <connection master="29" mface="2" slave="30" sface="2"/>
 	    <connection master="29" mface="2" slave="31" sface="2"/>
 	    <connection master="29" mface="2" slave="32" sface="2"/>
+		<connection master="30" mface="1" slave="2" sface="4" orient="1"/>
 	    <connection master="30" mface="4" slave="31" sface="3"/>
+		<connection master="31" mface="1" slave="3" sface="4" orient="1"/>
 	    <connection master="31" mface="4" slave="32" sface="3"/>
+		<connection master="32" mface="1" slave="4" sface="4" orient="1"/>
+		<connection master="33" mface="1" slave="8" sface="4" orient="1"/>
 	    <connection master="33" mface="4" slave="34" sface="3"/>
 	    <connection master="33" mface="3" slave="36" sface="4"/>
 	    <connection master="33" mface="2" slave="34" sface="2"/>
 	    <connection master="33" mface="2" slave="35" sface="2"/>
 	    <connection master="33" mface="2" slave="36" sface="2"/>
+		<connection master="34" mface="1" slave="9" sface="4" orient="1"/>
 	    <connection master="34" mface="4" slave="35" sface="3"/>
+		<connection master="35" mface="1" slave="10" sface="4" orient="1"/>
 	    <connection master="35" mface="4" slave="36" sface="3"/>
+		<connection master="36" mface="1" slave="11" sface="4" orient="1"/>
+		<connection master="37" mface="1" slave="20" sface="4" orient="1"/>
 	    <connection master="37" mface="4" slave="38" sface="3"/>
 	    <connection master="37" mface="3" slave="40" sface="4"/>
 	    <connection master="37" mface="2" slave="38" sface="2"/>
 	    <connection master="37" mface="2" slave="39" sface="2"/>
 	    <connection master="37" mface="2" slave="40" sface="2"/>
+		<connection master="38" mface="1" slave="21" sface="4" orient="1"/>
 	    <connection master="38" mface="4" slave="39" sface="3"/>
+		<connection master="39" mface="1" slave="22" sface="4" orient="1"/>
 	    <connection master="39" mface="4" slave="40" sface="3"/>
+		<connection master="40" mface="1" slave="23" sface="4" orient="1"/>
+		<connection master="41" mface="1" slave="24" sface="4" orient="1"/>
 	    <connection master="41" mface="4" slave="42" sface="3"/>
 	    <connection master="41" mface="3" slave="44" sface="4"/>
 	    <connection master="41" mface="2" slave="42" sface="2"/>
 	    <connection master="41" mface="2" slave="43" sface="2"/>
 	    <connection master="41" mface="2" slave="44" sface="2"/>
+		<connection master="42" mface="1" slave="25" sface="4" orient="1"/>
 	    <connection master="42" mface="4" slave="43" sface="3"/>
+		<connection master="43" mface="1" slave="26" sface="4" orient="1"/>
 	    <connection master="43" mface="4" slave="44" sface="3"/>
+		<connection master="44" mface="1" slave="27" sface="4" orient="1"/>
 	</topology>
 	<topologysets>
 		<set name="allEdges" type="face">
-			<item patch="1">4</item>
-			<item patch="2">4</item>
-			<item patch="3">4</item>
-			<item patch="4">4</item>
-			<item patch="8">4</item>
-			<item patch="9">4</item>
-			<item patch="10">4</item>
-			<item patch="11">4</item>
-			<item patch="20">4</item>
-			<item patch="21">4</item>
-			<item patch="22">4</item>
-			<item patch="23">4</item>
-			<item patch="24">4</item>
-			<item patch="25">4</item>
-			<item patch="26">4</item>
-			<item patch="27">4</item>
+			<item patch="29">4</item>
+			<item patch="30">4</item>
+			<item patch="31">4</item>
+			<item patch="32">4</item>
+			<item patch="33">4</item>
+			<item patch="34">4</item>
+			<item patch="35">4</item>
+			<item patch="36">4</item>
+			<item patch="37">4</item>
+			<item patch="38">4</item>
+			<item patch="39">4</item>
+			<item patch="40">4</item>
+			<item patch="41">4</item>
+			<item patch="42">4</item>
+			<item patch="43">4</item>
+			<item patch="44">4</item>
 		</set>
 		<set name="lastflate" type="face">
 			<item patch="15">6</item>

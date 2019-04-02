@@ -38,7 +38,7 @@ refP = int(float(sys.argv[12]))
 square1 = sf.square(size=(xL,yL))
 sq1 = vf.extrude(square1, amount=(0,0,depth))
 sq1.raise_order(refP)
-sq1.refine(1,direction='u')
+#sq1.refine(1,direction='u')
 if yL > klakkLY + 1:
     sq1.refine(refV,direction='v') #2
 #else:

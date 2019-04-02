@@ -12,8 +12,10 @@ N=112;V=0
 #   refP = polynomial refinement
 refi=0;refV=0;refP=2
 #   Define the geometry and refinement of the klakk
-klakkLength=60;klakkY=13
+klakkLength=40;klakkY=13
 klakkRefV=0;klakkRefW=0;klakkRefU=0;klakkLY=10
+# claw
+lengthClaw=10
 #   Plate geometry definitions
 xTot=180;yTot=150 #;tY1=4;tY2=2;tX1=1;tX2=3
 nx=2;ny=2;d=2;depth=10;totalEle=$(( nx * ny * 4 ))
@@ -132,11 +134,27 @@ do
     a=$(( a + 1 ))
 done
 
+# make the claw
+a=0
+while [ "$a" -lt $ny ]
+do
+    b=0
+    while [ "$b" -lt $nx ]
+    do
+    	python3 makeCircle.py $d $(( xTrans * b )) $(( yTrans * a )) $factor $depth $lengthClaw 1 1
+    	python3 merge.py total claw
+	b=$(( b + 1 ))
+    done
+    a=$(( a + 1 ))
+done
+
 # This will create a intermediate textfile used in the <connection> setting
 python3 makeLoadFile.py tempFiles/setsItem $nx
+echo Wrap it up
 # Wrap it up
 ../../Mappe/IFEM-GPM/bin/./getGNO -v G2/total.g2 | grep "<connection" > tempFiles/patchFileTemp.txt
 python3 qMerge.py
 python3 qSort.py
 python3 makeFile.py resultat.xinp G2/total.g2 tempFiles/setsItem.txt $N $V $elNum 3 3 8
 #echo $elNum
+echo hei
