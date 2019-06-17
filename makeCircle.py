@@ -10,6 +10,7 @@ import numpy as np
 np.set_printoptions(precision=6)
 from splipy.io import G2
 from math import pi
+# This script's purpose is to create the claw/fill the bolt hole.
 # handle input
 # 1st input: d - diameter of bolt/claw
 # 2nd input: transX

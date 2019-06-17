@@ -64,7 +64,7 @@ do
         # this wil make the 4 patches of the bolts
 	python3 makeBolt.py $d $(( xTrans * b )) $(( yTrans * a )) $(( refi )) $(( factor )) $(( tolBolt )) $(( depth )) $refP $a
     elNum=$(( elNum + 4 ))
-    python3 makeSetsItem.py tempFiles/setsItem $elNum $b $a $nx $ny
+    #python3 makeSetsItem2.py tempFiles/setsItem $elNum $b $a $nx $ny
     python3 updatePatchFile.py tempFiles/updatePatchFile $b $a $nx $ny false $elNum
 	# check if this is the first bolt. If yes, the file writer  will use 'w', else 'a'
 	if [ "$a" -eq 0 ] && [ "$b" -eq 0 ]
@@ -134,8 +134,9 @@ do
     a=$(( a + 1 ))
 done
 
-# make the claw
+# make the claws
 a=0
+lowerBolt=0;lowerBolt=$elNum
 while [ "$a" -lt $ny ]
 do
     b=0
@@ -143,10 +144,16 @@ do
     do
     	python3 makeCircle.py $d $(( xTrans * b )) $(( yTrans * a )) $factor $depth $lengthClaw 1 1
     	python3 merge.py total claw
+        python3 makeSetsItem.py tempFiles/setsItem $(( elNum + 1 )) $b $a $nx $ny 5
+        elNum=$(( elNum + 4 ))
 	b=$(( b + 1 ))
     done
     a=$(( a + 1 ))
 done
+upperBolt=$elNum
+# update the .xinp with the claw
+
+#
 
 # This will create a intermediate textfile used in the <connection> setting
 python3 makeLoadFile.py tempFiles/setsItem $nx
@@ -155,6 +162,5 @@ echo Wrap it up
 ../../Mappe/IFEM-GPM/bin/./getGNO -v G2/total.g2 | grep "<connection" > tempFiles/patchFileTemp.txt
 python3 qMerge.py
 python3 qSort.py
-python3 makeFile.py resultat.xinp G2/total.g2 tempFiles/setsItem.txt $N $V $elNum 3 3 8
-#echo $elNum
-echo hei
+python3 makeFile.py resultat.xinp G2/total.g2 tempFiles/setsItem.txt $N $V $elNum $lowerBolt $upperBolt 3 3 3
+echo $elNum

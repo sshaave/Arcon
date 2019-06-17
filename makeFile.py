@@ -8,9 +8,11 @@ setFile = sys.argv[3]
 strekk = sys.argv[4]
 V = sys.argv[5]
 elNum=int(float(sys.argv[6]))
-refU=sys.argv[7]
-refV=sys.argv[8]
-refW=sys.argv[9]
+lowerB=int(float(sys.argv[7]))
+upperB=int(float(sys.argv[8]))
+refU=sys.argv[9]
+refV=sys.argv[10]
+refW=sys.argv[11]
 with open(name,'w') as i1:
     i1.write('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n\n')
     i1.write('<!-- automatically generated file from script for Arcon Prosjekt AS. !-->\n\n')
@@ -27,6 +29,9 @@ with open(name,'w') as i1:
         for line in t1:
             i1.write("\t"+line)
     i1.write('\t</topology>\n')
+    for i in range(lowerB,upperB):
+        i1.write('\t<collapse patch="'+str(i+1))
+        i1.write('" face="2" edge="10"/>\n')
     i1.write('\t<topologysets>\n')
     with open(setFile) as t3:
         for line in t3:

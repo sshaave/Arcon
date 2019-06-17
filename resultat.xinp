@@ -7,7 +7,7 @@
 <!-- Geometry definitions -->
 <geometry>
 	<patchfile>G2/total.g2</patchfile>
-	<refine lowerpatch="1" u="3" v="3" w="8"/>
+	<refine lowerpatch="1" u="3" v="3" w="3"/>
 	<topology>
 	    <connection master="1" mface="4" slave="29" sface="1" orient="1"/>
 	    <connection master="1" mface="2" slave="2" sface="1"/>
@@ -93,24 +93,40 @@
 	    <connection master="42" mface="4" slave="43" sface="3"/>
 	    <connection master="43" mface="4" slave="44" sface="3"/>
 	</topology>
+	<collapse patch="29" face="2" edge="10"/>
+	<collapse patch="30" face="2" edge="10"/>
+	<collapse patch="31" face="2" edge="10"/>
+	<collapse patch="32" face="2" edge="10"/>
+	<collapse patch="33" face="2" edge="10"/>
+	<collapse patch="34" face="2" edge="10"/>
+	<collapse patch="35" face="2" edge="10"/>
+	<collapse patch="36" face="2" edge="10"/>
+	<collapse patch="37" face="2" edge="10"/>
+	<collapse patch="38" face="2" edge="10"/>
+	<collapse patch="39" face="2" edge="10"/>
+	<collapse patch="40" face="2" edge="10"/>
+	<collapse patch="41" face="2" edge="10"/>
+	<collapse patch="42" face="2" edge="10"/>
+	<collapse patch="43" face="2" edge="10"/>
+	<collapse patch="44" face="2" edge="10"/>
 	<topologysets>
 		<set name="allEdges" type="face">
-			<item patch="1">4</item>
-			<item patch="2">4</item>
-			<item patch="3">4</item>
-			<item patch="4">4</item>
-			<item patch="8">4</item>
-			<item patch="9">4</item>
-			<item patch="10">4</item>
-			<item patch="11">4</item>
-			<item patch="20">4</item>
-			<item patch="21">4</item>
-			<item patch="22">4</item>
-			<item patch="23">4</item>
-			<item patch="24">4</item>
-			<item patch="25">4</item>
-			<item patch="26">4</item>
-			<item patch="27">4</item>
+			<item patch="29">5</item>
+			<item patch="30">5</item>
+			<item patch="31">5</item>
+			<item patch="32">5</item>
+			<item patch="33">5</item>
+			<item patch="34">5</item>
+			<item patch="35">5</item>
+			<item patch="36">5</item>
+			<item patch="37">5</item>
+			<item patch="38">5</item>
+			<item patch="39">5</item>
+			<item patch="40">5</item>
+			<item patch="41">5</item>
+			<item patch="42">5</item>
+			<item patch="43">5</item>
+			<item patch="44">5</item>
 		</set>
 		<set name="lastflate" type="face">
 			<item patch="15">6</item>
