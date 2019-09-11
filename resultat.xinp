@@ -7,7 +7,7 @@
 <!-- Geometry definitions -->
 <geometry>
 	<patchfile>G2/total.g2</patchfile>
-	<refine lowerpatch="1" u="3" v="3" w="3"/>
+	<refine lowerpatch="1" u="6" v="6" w="5"/>
 	<topology>
 	    <connection master="1" mface="4" slave="29" sface="1" orient="1"/>
 	    <connection master="1" mface="2" slave="2" sface="1"/>
@@ -142,7 +142,7 @@
 <!-- Boundary conditions !-->
 <boundaryconditions>
 	<dirichlet set="allEdges" comp="123"/>
-	<neumann set="lastflate" direction="3" type="constant">112</neumann>
+	<neumann set="lastflate" direction="3" type="constant">10</neumann>
 	<neumann set="lastflate" direction="1" type="constant">0</neumann>
 </boundaryconditions>
 

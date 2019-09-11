@@ -5,20 +5,20 @@
 #   Define the forces
 #   N = tension if positive
 #   V = shear in XZ
-N=112;V=0
+N=10;V=0
 #   Define the refinement scheme
 #   refi= refinement scheme of bolt done by the scripts
 #   refV = refinement in Y-dir done by the script
 #   refP = polynomial refinement
 refi=0;refV=0;refP=2
-#   Define the geometry and refinement of the klakk
-klakkLength=40;klakkY=13
-klakkRefV=0;klakkRefW=0;klakkRefU=0;klakkLY=10
+#   Define the geometry and refinement of the klakk, klakkLength=height Z-dir
+klakkLength=40; #klakkY=1000
+klakkRefV=0;klakkRefW=0;klakkRefU=0;klakkLY=15
 # claw
 lengthClaw=10
 #   Plate geometry definitions
-xTot=180;yTot=150 #;tY1=4;tY2=2;tX1=1;tX2=3
-nx=2;ny=2;d=2;depth=10;totalEle=$(( nx * ny * 4 ))
+xTot=250;yTot=200 #;tY1=4;tY2=2;tX1=1;tX2=3
+nx=2;ny=2;d=12;depth=10;totalEle=$(( nx * ny * 4 ))
 vE=$(( nx * 3 ))
 n2x=$(( nx - 1 ))
 nKlakk=$(( n2x * 2 ))
