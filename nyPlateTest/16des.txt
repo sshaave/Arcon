@@ -1,0 +1,351 @@
+
+ >>> IFEM Linear Elasticity solver <<<
+ =====================================
+
+ Executing command:
+ ../../../IFEM/Apps/IFEM-Elasticity/Linear/Release/bin/LinEl testplate111.xinp -printMax -printMaxPatch
+
+ ===== IFEM v0.9.0 initialized =====
+       HDF5 support: disabled
+  LR spline support: enabled
+     OpenMP support: enabled
+        MPI support: disabled
+      PETSc support: disabled
+    SuperLU support: enabled (serial)
+    UMFPack support: disabled
+       ISTL support: disabled
+        VTF support: disabled
+
+Input file: testplate111.xinp
+Equation solver: 2
+Number of Gauss points: 4
+Solution component output zero tolerance: 1e-06
+
+Parsing input file testplate111.xinp
+
+Parsing <discretization>
+
+Parsing <geometry>
+  Parsing <patchfile>
+	Reading data file G2/total.g2
+	Reading patch 1
+	Reading patch 2
+	Reading patch 3
+	Reading patch 4
+	Reading patch 5
+	Reading patch 6
+	Reading patch 7
+	Reading patch 8
+	Reading patch 9
+	Reading patch 10
+	Reading patch 11
+	Reading patch 12
+	Reading patch 13
+	Reading patch 14
+	Reading patch 15
+	Reading patch 16
+  Parsing <refine>
+  Parsing <topology>
+  Parsing <topologysets>
+	Topology sets: allEdges (1,3,2D) (2,3,2D) (3,3,2D) (10,4,2D) (11,4,2D) (12,4,2D)
+	               lastflate (13,6,2D) (14,6,2D) (15,6,2D) (16,6,2D)
+  Parsing <patchfile>
+  Parsing <refine>
+	Refining P1 4 4 3
+	Refining P2 4 4 3
+	Refining P3 4 4 3
+	Refining P4 4 4 3
+	Refining P5 4 4 3
+	Refining P6 4 4 3
+	Refining P7 4 4 3
+	Refining P8 4 4 3
+	Refining P9 4 4 3
+	Refining P10 4 4 3
+	Refining P11 4 4 3
+	Refining P12 4 4 3
+	Refining P13 4 4 3
+	Refining P14 4 4 3
+	Refining P15 4 4 3
+	Refining P16 4 4 3
+  Parsing <topology>
+	Connecting P2 F1 to P1 F2 orient 0
+	Connecting P4 F3 to P1 F4 orient 0
+	Connecting P3 F1 to P2 F2 orient 0
+	Connecting P7 F3 to P2 F4 orient 0
+	Connecting P9 F3 to P3 F4 orient 0
+	Connecting P6 F3 to P4 F2 orient 2
+	Connecting P10 F3 to P4 F4 orient 0
+	Connecting P8 F2 to P5 F1 orient 0
+	Connecting P6 F1 to P5 F2 orient 0
+	Connecting P11 F3 to P5 F3 orient 2
+	Connecting P13 F1 to P5 F4 orient 1
+	Connecting P7 F1 to P6 F2 orient 0
+	Connecting P14 F1 to P6 F4 orient 1
+	Connecting P8 F1 to P7 F2 orient 0
+	Connecting P15 F1 to P7 F4 orient 1
+	Connecting P16 F1 to P8 F4 orient 1
+	Connecting P9 F1 to P8 F3 orient 0
+	Connecting P12 F3 to P9 F4 orient 0
+	Connecting P11 F1 to P10 F2 orient 0
+	Connecting P12 F1 to P11 F2 orient 0
+	Connecting P14 F2 to P13 F2 orient 0
+	Connecting P16 F2 to P13 F2 orient 0
+	Connecting P16 F2 to P13 F2 orient 0
+	Connecting P16 F4 to P13 F3 orient 0
+	Connecting P14 F3 to P13 F4 orient 0
+	Connecting P16 F3 to P15 F4 orient 0
+  Parsing <topologysets>
+
+Parsing <boundaryconditions>
+  Parsing <dirichlet>
+	Dirichlet code 123: (fixed)
+  Parsing <neumann>
+	Neumann code 1000000 direction 3 (constant): 62
+  Parsing <neumann>
+	Neumann code 2000000 direction 1 (constant): 0
+
+Parsing <elasticity>
+  Parsing <isotropic>
+	Material code 0: 210000 0.3 0.00785
+
+Parsing input file succeeded.
+
+
+Equation solver: 2
+Number of Gauss points: p+1 (p = polynomial degree of basis)
+
+Problem definition:
+Elasticity: 3D, gravity = 0 0 0
+LinIsotropic: E = 210000, nu = 0.3, rho = 0.00785, alpha = 1.2e-07
+
+Renumbered 8386 nodes.
+
+Resolving Dirichlet boundary conditions
+	Constraining P1 F3 in direction(s) 123
+	Constraining P2 F3 in direction(s) 123
+	Constraining P3 F3 in direction(s) 123
+	Constraining P10 F4 in direction(s) 123
+	Constraining P11 F4 in direction(s) 123
+	Constraining P12 F4 in direction(s) 123
+
+
+ >>> SAM model summary <<<
+Number of elements    2400
+Number of nodes       7427
+Number of dofs        22281
+Number of unknowns    21357
+Number of quadrature points 128000 2400
+
+Pre-computing sparsity pattern for system matrix (21357x21357): nNZ = 10496493
+
+
+Processing integrand associated with code 0
+
+Assembling interior matrix terms for P1
+
+Assembling interior matrix terms for P2
+
+Assembling interior matrix terms for P3
+
+Assembling interior matrix terms for P4
+
+Assembling interior matrix terms for P5
+
+Assembling interior matrix terms for P6
+
+Assembling interior matrix terms for P7
+
+Assembling interior matrix terms for P8
+
+Assembling interior matrix terms for P9
+
+Assembling interior matrix terms for P10
+
+Assembling interior matrix terms for P11
+
+Assembling interior matrix terms for P12
+
+Assembling interior matrix terms for P13
+
+Assembling interior matrix terms for P14
+
+Assembling interior matrix terms for P15
+
+Assembling interior matrix terms for P16
+
+Assembling Neumann matrix terms for boundary 6 on P13
+
+Assembling Neumann matrix terms for boundary 6 on P14
+
+Assembling Neumann matrix terms for boundary 6 on P15
+
+Assembling Neumann matrix terms for boundary 6 on P16
+
+Assembling Neumann matrix terms for boundary 6 on P13
+
+Assembling Neumann matrix terms for boundary 6 on P14
+
+Assembling Neumann matrix terms for boundary 6 on P15
+
+Assembling Neumann matrix terms for boundary 6 on P16
+
+Solving the equation system ...
+	Condition number: 4.68789e+06
+
+ >>> Solution summary <<<
+
+L2-norm            : 0.0433336
+Max X-displacement : 0.016761 node 5954
+Max Y-displacement : 0.0243225 node 6933
+Max Z-displacement : 0.152424 node 6253
+
+Projecting secondary solution ...
+	Greville point projection
+
+Maximum stresses in Gauss points:
+  Max s_xx:             -4.692044e+02  X = -21 -21 5	Patch 1
+                        -7.303739e+02  X = -3.6 -21 5	Patch 2
+                        -4.505970e+02  X = 21 -21 5	Patch 3
+                        -6.320622e+01  X = -18 -18 5	Patch 4
+                         1.673830e+02  X = 8.48528 8.48528 5	Patch 5
+                        -8.818028e+02  X = -8.48528 -8.48528 0.416667	Patch 6
+                        -5.300099e+02  X = -8.48528 -8.48528 0.416667	Patch 7
+                         1.669213e+02  X = 8.48528 8.48528 5	Patch 8
+                        -6.031167e+01  X = 18 18 5	Patch 9
+                        -4.124617e+02  X = -21 21 5	Patch 10
+                        -7.120328e+02  X = 3.6 21 5	Patch 11
+                        -4.664810e+02  X = 21 21 5	Patch 12
+                        -9.660853e+02  X = -0.424264 0.424264 0	Patch 13
+                        -1.012883e+03  X = -0.530192 0.280885 0	Patch 14
+                        -1.519900e+03  X = -8.48528 -8.48528 0	Patch 15
+                        -8.491858e+02  X = 0.591821 0.0987337 0	Patch 16
+  Max s_yy:             -1.094810e+03  X = -21 -21 5	Patch 1
+                        -1.704206e+03  X = -3.6 -21 5	Patch 2
+                        -1.051393e+03  X = 21 -21 5	Patch 3
+                        -4.181940e+02  X = -18 -18 5	Patch 4
+                        -6.601937e+02  X = 3.6 18 5	Patch 5
+                        -5.966512e+02  X = -8.48528 -8.48528 0.416667	Patch 6
+                        -9.178513e+02  X = -8.48528 -8.48528 0.416667	Patch 7
+                        -5.101277e+02  X = 11.8364 1.97467 0	Patch 8
+                        -4.063742e+02  X = 18 18 5	Patch 9
+                        -9.624106e+02  X = -21 21 5	Patch 10
+                        -1.661410e+03  X = 3.6 21 5	Patch 11
+                        -1.088456e+03  X = 21 21 5	Patch 12
+                        -1.061007e+03  X = 0.280885 0.530192 0	Patch 13
+                        -1.516681e+03  X = -8.48528 -8.48528 0	Patch 14
+                        -1.433889e+03  X = 0.280885 -0.530192 0	Patch 15
+                        -1.491207e+03  X = 0.424264 -0.424264 0	Patch 16
+  Max s_zz:             -4.692044e+02  X = -21 -21 5	Patch 1
+                        -7.303739e+02  X = -3.6 -21 5	Patch 2
+                        -4.505970e+02  X = 21 -21 5	Patch 3
+                        -5.771133e+00  X = -21 -18 5	Patch 4
+                        -3.379935e+01  X = 1.97467 11.8364 0.416667	Patch 5
+                        -1.719849e+02  X = -8.48528 -8.48528 1.25	Patch 6
+                        -1.775671e+02  X = -8.48528 -8.48528 1.25	Patch 7
+                        -3.347093e+01  X = 11.8364 1.97467 0.416667	Patch 8
+                         4.283407e+00  X = 21 18 0	Patch 9
+                        -4.124617e+02  X = -21 21 5	Patch 10
+                        -7.120328e+02  X = 3.6 21 5	Patch 11
+                        -4.664810e+02  X = 21 21 5	Patch 12
+                        -1.103357e+02  X = -0.424264 0.424264 0.416667	Patch 13
+                        -2.228732e+02  X = -8.48528 -8.48528 1.25	Patch 14
+                        -1.375428e+02  X = 0.424264 -0.424264 0.416667	Patch 15
+                        -1.650797e+02  X = 0.424264 -0.424264 0.416667	Patch 16
+  Max s_xy:             -2.565904e+02  X = -21 -21 5	Patch 1
+                        -1.039453e+02  X = -18 -21 5	Patch 2
+                         2.449222e+02  X = 21 -21 5	Patch 3
+                        -9.582165e+01  X = -18 -15.6 5	Patch 4
+                         1.179740e+02  X = -10.864 10.864 5	Patch 5
+                         3.836997e+02  X = -8.48528 -8.48528 0	Patch 6
+                         3.465999e+02  X = -8.48528 -8.48528 0	Patch 7
+                         1.120379e+02  X = 10.864 -10.864 5	Patch 8
+                        -7.784397e+01  X = 18 18 5	Patch 9
+                         2.259793e+02  X = -21 21 5	Patch 10
+                         9.170831e+01  X = -18 21 5	Patch 11
+                        -2.532757e+02  X = 21 21 5	Patch 12
+                         4.247221e+02  X = -0.381605 0.46301 0	Patch 13
+                         4.039615e+02  X = -0.424264 0.424264 0	Patch 14
+                         3.899806e+02  X = 0.424264 -0.424264 0	Patch 15
+                         3.907880e+02  X = 0.46301 -0.381605 0	Patch 16
+  Max s_yz:              2.312259e+02  X = -18 -21 5	Patch 1
+                         4.992733e+02  X = -3.6 -21 5	Patch 2
+                         2.202868e+02  X = 18 -21 5	Patch 3
+                         5.929748e+01  X = -18 -15.6 2.5	Patch 4
+                        -1.534499e+02  X = 1.97467 11.8364 2.5	Patch 5
+                         2.586788e+02  X = -8.48528 -8.48528 2.5	Patch 6
+                         3.801244e+02  X = -8.48528 -8.48528 2.5	Patch 7
+                        -1.068442e+02  X = 8.48528 8.48528 2.5	Patch 8
+                        -5.687289e+01  X = 18 15.6 2.5	Patch 9
+                        -2.018326e+02  X = -18 21 5	Patch 10
+                        -4.871061e+02  X = 3.6 21 5	Patch 11
+                        -2.281594e+02  X = 18 21 5	Patch 12
+                        -1.548150e+02  X = 1.97467 11.8364 2.5	Patch 13
+                         4.198371e+02  X = -8.48528 -8.48528 2.5	Patch 14
+                         2.239548e+02  X = -8.48528 -8.48528 2.5	Patch 15
+                        -1.390693e+02  X = 0.424264 0.424264 2.5	Patch 16
+  Max s_xz:             -2.785535e+01  X = -18 -18.6 2.5	Patch 1
+                        -3.176721e+01  X = -18 -18.2 2.5	Patch 2
+                         2.510638e+01  X = 18 -18.6 2.5	Patch 3
+                        -2.565688e+01  X = -18 -18 2.5	Patch 4
+                        -4.745458e+01  X = 8.48528 8.48528 2.5	Patch 5
+                         1.833097e+02  X = -8.48528 -8.48528 2.5	Patch 6
+                         8.236381e+01  X = -8.96102 -8.96102 2.5	Patch 7
+                        -6.961317e+01  X = 11.8364 1.97467 2.5	Patch 8
+                         2.438343e+01  X = 18 18 2.5	Patch 9
+                        -2.507940e+01  X = -18 18.6 2.5	Patch 10
+                         2.851580e+01  X = 18 18.6 2.5	Patch 11
+                         2.544935e+01  X = 18 18.6 2.5	Patch 12
+                        -1.447471e+02  X = 0.424264 0.424264 2.5	Patch 13
+                         3.444680e+02  X = -8.48528 -8.48528 2.5	Patch 14
+                        -2.216966e+02  X = -0.424264 -0.424264 2.5	Patch 15
+                        -1.801457e+02  X = 0.591821 0.0987337 2.5	Patch 16
+  Max von Mises stress:  8.064120e+02  X = -21 -21 5	Patch 1
+                         1.302565e+03  X = -3.6 -21 5	Patch 2
+                         7.746090e+02  X = 21 -21 5	Patch 3
+                         4.223761e+02  X = -18 -18 5	Patch 4
+                         5.986200e+02  X = 3.6 18 5	Patch 5
+                         1.010094e+03  X = -8.48528 -8.48528 0	Patch 6
+                         9.458399e+02  X = -8.48528 -8.48528 0	Patch 7
+                         4.515703e+02  X = 11.8364 1.97467 5	Patch 8
+                         4.017648e+02  X = 18 18 5	Patch 9
+                         7.087612e+02  X = -21 21 5	Patch 10
+                         1.270726e+03  X = 3.6 21 5	Patch 11
+                         8.019711e+02  X = 21 21 5	Patch 12
+                         1.060455e+03  X = -0.424264 0.424264 5	Patch 13
+                         1.758418e+03  X = -8.48528 -8.48528 0	Patch 14
+                         1.468221e+03  X = -8.48528 -8.48528 0	Patch 15
+                         1.393913e+03  X = 0.424264 -0.424264 5	Patch 16
+
+
+Integrating solution norms (FE solution) ...
+Energy norm |u^h| = a(u^h,u^h)^0.5   : 55.2336
+External energy ((f,u^h)+(t,u^h)^0.5 : 55.2336
+
+>>> Error estimates based on Greville point projection <<<
+Energy norm |u^r| = a(u^r,u^r)^0.5   : 55.2566
+Error norm a(e,e)^0.5, e=u^r-u^h     : 3.62002
+- relative error (% of |u^r|) : 6.55129
+L2-norm |s^r| = (s^r,s^r)^0.5        : 25903.2
+L2-error (e,e)^0.5, e=s^r-s^h        : 1682.94
+- relative error (% of |s^r|) : 6.49702
+
+===============================================================
+===   Profiling results for ../../../IFEM/Apps/IFEM-Elasticity/Linear/Release/bin/LinEl
+=================================================================
+                      |       CPU time     |      Wall time     |
+Task                  |  Total(s)  Mean(ms)|  Total(s)  Mean(ms)| calls | thread
+----------------------+--------------------+--------------------+-------+-------
+ASMs3D::evalSol(S)    |      0.03     1.95 |      0.12     7.57 |    16
+ASMs3D::integrate(B)  |      0.25    15.62 |      0.02     1.34 |    16
+ASMs3D::integrate(I)  |     24.02   750.49 |     13.01   406.57 |    32
+ASMs3D::projectSolutio|      0.03     1.95 |      0.13     7.86 |    16
+Element assembly      |     21.56          |     12.88          |
+Equation solving      |      4.27          |      4.02          |
+Model input           |      0.00          |      0.01          |
+Norm integration      |      2.70          |      0.16          |
+Solution projection   |      0.03          |      0.13          |
+Spline evaluation     |      1.48    23.19 |      0.12     1.94 |    64
+Other                 |      5.16          |      4.91          |
+----------------------+--------------------+--------------------+-------+-------
+Total time            |     33.72          |     22.11          |
+=================================================================
