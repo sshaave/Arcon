@@ -1,0 +1,9 @@
+		<set name="allEdges" type="face">
+			<item patch="1">5</item>
+			<item patch="2">5</item>
+			<item patch="3">5</item>
+			<item patch="4">5</item>
+		</set>
+		<set name="lastflate" type="face">
+			<item patch="15">6</item>
+		</set>

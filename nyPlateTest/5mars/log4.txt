@@ -1,0 +1,676 @@
+
+ >>> IFEM Linear Elasticity solver <<<
+ =====================================
+
+ Executing command:
+ LinEl resultat4.xinp -vtf 1
+
+ ===== IFEM v0.9.0 initialized =====
+       HDF5 support: enabled
+  LR spline support: enabled
+     OpenMP support: enabled
+        MPI support: disabled
+      PETSc support: disabled
+    SuperLU support: enabled (serial)
+    UMFPack support: disabled
+       ISTL support: disabled
+        VTF support: enabled (v1)
+
+Input file: resultat4.xinp
+Equation solver: 2
+Number of Gauss points: 4
+VTF file format: BINARY
+Number of visualization points: 2 2 2
+Solution component output zero tolerance: 1e-06
+
+Parsing input file resultat4.xinp
+
+Parsing <discretization>
+
+Parsing <geometry>
+  Parsing <patchfile>
+	Reading data file total.g2
+	Reading patch 1
+	Reading patch 2
+	Reading patch 3
+	Reading patch 4
+	Reading patch 5
+	Reading patch 6
+	Reading patch 7
+	Reading patch 8
+	Reading patch 9
+	Reading patch 10
+	Reading patch 11
+	Reading patch 12
+	Reading patch 13
+	Reading patch 14
+	Reading patch 15
+	Reading patch 16
+	Reading patch 17
+	Reading patch 18
+	Reading patch 19
+	Reading patch 20
+	Reading patch 21
+	Reading patch 22
+	Reading patch 23
+	Reading patch 24
+	Reading patch 25
+	Reading patch 26
+	Reading patch 27
+	Reading patch 28
+	Reading patch 29
+	Reading patch 30
+	Reading patch 31
+	Reading patch 32
+	Reading patch 33
+	Reading patch 34
+	Reading patch 35
+	Reading patch 36
+	Reading patch 37
+	Reading patch 38
+	Reading patch 39
+	Reading patch 40
+	Reading patch 41
+	Reading patch 42
+	Reading patch 43
+	Reading patch 44
+	Reading patch 45
+	Reading patch 46
+  Parsing <refine>
+  Parsing <topology>
+  Parsing <topologysets>
+	Topology sets: allEdges (1,4,2D) (2,4,2D) (3,4,2D) (4,4,2D) (8,4,2D) (9,4,2D) (10,4,2D) (11,4,2D) (21,4,2D) (22,4,2D) (23,4,2D) (24,4,2D) (33,4,2D) (34,4,2D) (35,4,2D) (36,4,2D) (37,4,2D) (38,4,2D) (39,4,2D) (40,4,2D) (42,4,2D) (43,4,2D) (44,4,2D) (45,4,2D)
+	               lastflate (15,6,2D) (19,6,2D) (28,6,2D)
+  Parsing <patchfile>
+  Parsing <refine>
+	Refining P1 2 2 2
+	Refining P2 2 2 2
+	Refining P3 2 2 2
+	Refining P4 2 2 2
+	Refining P5 2 2 2
+	Refining P6 2 2 2
+	Refining P7 2 2 2
+	Refining P8 2 2 2
+	Refining P9 2 2 2
+	Refining P10 2 2 2
+	Refining P11 2 2 2
+	Refining P12 2 2 2
+	Refining P13 2 2 2
+	Refining P14 2 2 2
+	Refining P15 2 2 2
+	Refining P16 2 2 2
+	Refining P17 2 2 2
+	Refining P18 2 2 2
+	Refining P19 2 2 2
+	Refining P20 2 2 2
+	Refining P21 2 2 2
+	Refining P22 2 2 2
+	Refining P23 2 2 2
+	Refining P24 2 2 2
+	Refining P25 2 2 2
+	Refining P26 2 2 2
+	Refining P27 2 2 2
+	Refining P28 2 2 2
+	Refining P29 2 2 2
+	Refining P30 2 2 2
+	Refining P31 2 2 2
+	Refining P32 2 2 2
+	Refining P33 2 2 2
+	Refining P34 2 2 2
+	Refining P35 2 2 2
+	Refining P36 2 2 2
+	Refining P37 2 2 2
+	Refining P38 2 2 2
+	Refining P39 2 2 2
+	Refining P40 2 2 2
+	Refining P41 2 2 2
+	Refining P42 2 2 2
+	Refining P43 2 2 2
+	Refining P44 2 2 2
+	Refining P45 2 2 2
+	Refining P46 2 2 2
+  Parsing <topology>
+	Connecting P8 F3 to P17 F3 orient 2
+	Connecting P9 F3 to P12 F2 orient 2
+	Connecting P21 F3 to P30 F3 orient 2
+	Connecting P22 F3 to P25 F2 orient 2
+	Connecting P38 F3 to P41 F2 orient 2
+	Connecting P1 F3 to P5 F3 orient 2
+	Connecting P43 F3 to P46 F2 orient 2
+	Connecting P45 F1 to P44 F2 orient 0
+	Connecting P44 F1 to P43 F2 orient 0
+	Connecting P43 F1 to P42 F2 orient 0
+	Connecting P45 F2 to P42 F1 orient 0
+	Connecting P40 F1 to P39 F2 orient 0
+	Connecting P39 F1 to P38 F2 orient 0
+	Connecting P38 F1 to P37 F2 orient 0
+	Connecting P40 F2 to P37 F1 orient 0
+	Connecting P36 F1 to P35 F2 orient 0
+	Connecting P35 F1 to P34 F2 orient 0
+	Connecting P34 F1 to P33 F2 orient 0
+	Connecting P36 F2 to P33 F1 orient 0
+	Connecting P44 F3 to P32 F4 orient 0
+	Connecting P32 F3 to P31 F4 orient 0
+	Connecting P31 F3 to P30 F4 orient 0
+	Connecting P46 F3 to P29 F4 orient 0
+	Connecting P32 F1 to P29 F2 orient 0
+	Connecting P28 F5 to P27 F6 orient 0
+	Connecting P29 F3 to P27 F4 orient 0
+	Connecting P31 F1 to P27 F2 orient 0
+	Connecting P27 F3 to P26 F4 orient 0
+	Connecting P30 F1 to P26 F2 orient 0
+	Connecting P26 F3 to P25 F4 orient 0
+	Connecting P24 F1 to P23 F2 orient 0
+	Connecting P23 F1 to P22 F2 orient 0
+	Connecting P22 F1 to P21 F2 orient 0
+	Connecting P24 F2 to P21 F1 orient 0
+	Connecting P39 F3 to P20 F4 orient 0
+	Connecting P29 F1 to P20 F2 orient 0
+	Connecting P28 F1 to P19 F2 orient 0
+	Connecting P19 F5 to P18 F6 orient 0
+	Connecting P20 F3 to P18 F4 orient 0
+	Connecting P27 F1 to P18 F2 orient 0
+	Connecting P18 F3 to P17 F4 orient 0
+	Connecting P26 F1 to P17 F2 orient 0
+	Connecting P41 F3 to P16 F4 orient 0
+	Connecting P20 F1 to P16 F2 orient 0
+	Connecting P19 F1 to P15 F2 orient 0
+	Connecting P15 F5 to P14 F6 orient 0
+	Connecting P16 F3 to P14 F4 orient 0
+	Connecting P18 F1 to P14 F2 orient 0
+	Connecting P14 F3 to P13 F4 orient 0
+	Connecting P17 F1 to P13 F2 orient 0
+	Connecting P13 F3 to P12 F4 orient 0
+	Connecting P11 F1 to P10 F2 orient 0
+	Connecting P10 F1 to P9 F2 orient 0
+	Connecting P9 F1 to P8 F2 orient 0
+	Connecting P11 F2 to P8 F1 orient 0
+	Connecting P35 F3 to P7 F4 orient 0
+	Connecting P16 F1 to P7 F2 orient 0
+	Connecting P7 F3 to P6 F4 orient 0
+	Connecting P14 F1 to P6 F2 orient 0
+	Connecting P6 F3 to P5 F4 orient 0
+	Connecting P13 F1 to P5 F2 orient 0
+	Connecting P4 F1 to P3 F2 orient 0
+	Connecting P3 F1 to P2 F2 orient 0
+	Connecting P2 F1 to P1 F2 orient 0
+	Connecting P4 F2 to P1 F1 orient 0
+	Connecting P11 F3 to P25 F1 orient 0
+	Connecting P40 F3 to P46 F1 orient 0
+	Connecting P4 F3 to P12 F1 orient 0
+	Connecting P36 F3 to P41 F1 orient 0
+  Parsing <topologysets>
+
+Parsing <boundaryconditions>
+  Parsing <dirichlet>
+	Dirichlet code 123: (fixed)
+  Parsing <neumann>
+	Neumann code 1000000 direction 3 (constant): 2000
+  Parsing <neumann>
+	Neumann code 2000000 direction 1 (constant): 500
+
+Parsing <elasticity>
+  Parsing <isotropic>
+	Material code 0: 210000 0.3 0.00785
+
+Parsing input file succeeded.
+
+
+Equation solver: 2
+Number of Gauss points: p+1 (p = polynomial degree of basis)
+VTF file format: BINARY
+Number of visualization points: 2 2 2
+
+Problem definition:
+Elasticity: 3D, gravity = 0 0 0
+LinIsotropic: E = 210000, nu = 0.3, rho = 0.00785, alpha = 1.2e-07
+
+Renumbered 25407 nodes.
+
+Resolving Dirichlet boundary conditions
+	Constraining P1 F4 in direction(s) 123
+	Constraining P2 F4 in direction(s) 123
+	Constraining P3 F4 in direction(s) 123
+	Constraining P4 F4 in direction(s) 123
+	Constraining P8 F4 in direction(s) 123
+	Constraining P9 F4 in direction(s) 123
+	Constraining P10 F4 in direction(s) 123
+	Constraining P11 F4 in direction(s) 123
+	Constraining P21 F4 in direction(s) 123
+	Constraining P22 F4 in direction(s) 123
+	Constraining P23 F4 in direction(s) 123
+	Constraining P24 F4 in direction(s) 123
+	Constraining P33 F4 in direction(s) 123
+	Constraining P34 F4 in direction(s) 123
+	Constraining P35 F4 in direction(s) 123
+	Constraining P36 F4 in direction(s) 123
+	Constraining P37 F4 in direction(s) 123
+	Constraining P38 F4 in direction(s) 123
+	Constraining P39 F4 in direction(s) 123
+	Constraining P40 F4 in direction(s) 123
+	Constraining P42 F4 in direction(s) 123
+	Constraining P43 F4 in direction(s) 123
+	Constraining P44 F4 in direction(s) 123
+	Constraining P45 F4 in direction(s) 123
+
+
+ >>> SAM model summary <<<
+Number of elements    6804
+Number of nodes       22018
+Number of dofs        66054
+Number of unknowns    62598
+Number of quadrature points 393984 2880
+
+Pre-computing sparsity pattern for system matrix (62598x62598): nNZ = 33286068
+
+
+Processing integrand associated with code 0
+
+Assembling interior matrix terms for P1
+
+Assembling interior matrix terms for P2
+
+Assembling interior matrix terms for P3
+
+Assembling interior matrix terms for P4
+
+Assembling interior matrix terms for P5
+
+Assembling interior matrix terms for P6
+
+Assembling interior matrix terms for P7
+
+Assembling interior matrix terms for P8
+
+Assembling interior matrix terms for P9
+
+Assembling interior matrix terms for P10
+
+Assembling interior matrix terms for P11
+
+Assembling interior matrix terms for P12
+
+Assembling interior matrix terms for P13
+
+Assembling interior matrix terms for P14
+
+Assembling interior matrix terms for P15
+
+Assembling interior matrix terms for P16
+
+Assembling interior matrix terms for P17
+
+Assembling interior matrix terms for P18
+
+Assembling interior matrix terms for P19
+
+Assembling interior matrix terms for P20
+
+Assembling interior matrix terms for P21
+
+Assembling interior matrix terms for P22
+
+Assembling interior matrix terms for P23
+
+Assembling interior matrix terms for P24
+
+Assembling interior matrix terms for P25
+
+Assembling interior matrix terms for P26
+
+Assembling interior matrix terms for P27
+
+Assembling interior matrix terms for P28
+
+Assembling interior matrix terms for P29
+
+Assembling interior matrix terms for P30
+
+Assembling interior matrix terms for P31
+
+Assembling interior matrix terms for P32
+
+Assembling interior matrix terms for P33
+
+Assembling interior matrix terms for P34
+
+Assembling interior matrix terms for P35
+
+Assembling interior matrix terms for P36
+
+Assembling interior matrix terms for P37
+
+Assembling interior matrix terms for P38
+
+Assembling interior matrix terms for P39
+
+Assembling interior matrix terms for P40
+
+Assembling interior matrix terms for P41
+
+Assembling interior matrix terms for P42
+
+Assembling interior matrix terms for P43
+
+Assembling interior matrix terms for P44
+
+Assembling interior matrix terms for P45
+
+Assembling interior matrix terms for P46
+
+Assembling Neumann matrix terms for boundary 6 on P15
+
+Assembling Neumann matrix terms for boundary 6 on P19
+
+Assembling Neumann matrix terms for boundary 6 on P28
+
+Assembling Neumann matrix terms for boundary 6 on P15
+
+Assembling Neumann matrix terms for boundary 6 on P19
+
+Assembling Neumann matrix terms for boundary 6 on P28
+
+Solving the equation system ...
+	Condition number: 4.65772e+06
+
+ >>> Solution summary <<<
+
+L2-norm            : 0.11512
+Max X-displacement : 0.131067 node 14430
+Max Y-displacement : 0.065706 node 9549
+Max Z-displacement : 0.461062 node 7372
+
+Projecting secondary solution ...
+	Greville point projection
+
+
+Integrating solution norms (FE solution) ...
+Energy norm |u^h| = a(u^h,u^h)^0.5   : 191.266
+External energy ((f,u^h)+(t,u^h)^0.5 : 191.266
+
+>>> Error estimates based on Greville point projection <<<
+Energy norm |u^r| = a(u^r,u^r)^0.5   : 192.113
+Error norm a(e,e)^0.5, e=u^r-u^h     : 14.6175
+- relative error (% of |u^r|) : 7.60879
+L2-norm |s^r| = (s^r,s^r)^0.5        : 89520.5
+L2-error (e,e)^0.5, e=s^r-s^h        : 6848.48
+- relative error (% of |s^r|) : 7.65018
+
+Writing VTF-file resultat4.vtf
+Writing geometry for patch 1
+Writing geometry for patch 2
+Writing geometry for patch 3
+Writing geometry for patch 4
+Writing geometry for patch 5
+Writing geometry for patch 6
+Writing geometry for patch 7
+Writing geometry for patch 8
+Writing geometry for patch 9
+Writing geometry for patch 10
+Writing geometry for patch 11
+Writing geometry for patch 12
+Writing geometry for patch 13
+Writing geometry for patch 14
+Writing geometry for patch 15
+Writing geometry for patch 16
+Writing geometry for patch 17
+Writing geometry for patch 18
+Writing geometry for patch 19
+Writing geometry for patch 20
+Writing geometry for patch 21
+Writing geometry for patch 22
+Writing geometry for patch 23
+Writing geometry for patch 24
+Writing geometry for patch 25
+Writing geometry for patch 26
+Writing geometry for patch 27
+Writing geometry for patch 28
+Writing geometry for patch 29
+Writing geometry for patch 30
+Writing geometry for patch 31
+Writing geometry for patch 32
+Writing geometry for patch 33
+Writing geometry for patch 34
+Writing geometry for patch 35
+Writing geometry for patch 36
+Writing geometry for patch 37
+Writing geometry for patch 38
+Writing geometry for patch 39
+Writing geometry for patch 40
+Writing geometry for patch 41
+Writing geometry for patch 42
+Writing geometry for patch 43
+Writing geometry for patch 44
+Writing geometry for patch 45
+Writing geometry for patch 46
+Writing boundary tractions
+Writing boundary conditions for patch 1
+Writing boundary conditions for patch 2
+Writing boundary conditions for patch 3
+Writing boundary conditions for patch 4
+Writing boundary conditions for patch 8
+Writing boundary conditions for patch 9
+Writing boundary conditions for patch 10
+Writing boundary conditions for patch 11
+Writing boundary conditions for patch 21
+Writing boundary conditions for patch 22
+Writing boundary conditions for patch 23
+Writing boundary conditions for patch 24
+Writing boundary conditions for patch 33
+Writing boundary conditions for patch 34
+Writing boundary conditions for patch 35
+Writing boundary conditions for patch 36
+Writing boundary conditions for patch 37
+Writing boundary conditions for patch 38
+Writing boundary conditions for patch 39
+Writing boundary conditions for patch 40
+Writing boundary conditions for patch 42
+Writing boundary conditions for patch 43
+Writing boundary conditions for patch 44
+Writing boundary conditions for patch 45
+Writing primary solution for patch 1
+Writing primary solution for patch 2
+Writing primary solution for patch 3
+Writing primary solution for patch 4
+Writing primary solution for patch 5
+Writing primary solution for patch 6
+Writing primary solution for patch 7
+Writing primary solution for patch 8
+Writing primary solution for patch 9
+Writing primary solution for patch 10
+Writing primary solution for patch 11
+Writing primary solution for patch 12
+Writing primary solution for patch 13
+Writing primary solution for patch 14
+Writing primary solution for patch 15
+Writing primary solution for patch 16
+Writing primary solution for patch 17
+Writing primary solution for patch 18
+Writing primary solution for patch 19
+Writing primary solution for patch 20
+Writing primary solution for patch 21
+Writing primary solution for patch 22
+Writing primary solution for patch 23
+Writing primary solution for patch 24
+Writing primary solution for patch 25
+Writing primary solution for patch 26
+Writing primary solution for patch 27
+Writing primary solution for patch 28
+Writing primary solution for patch 29
+Writing primary solution for patch 30
+Writing primary solution for patch 31
+Writing primary solution for patch 32
+Writing primary solution for patch 33
+Writing primary solution for patch 34
+Writing primary solution for patch 35
+Writing primary solution for patch 36
+Writing primary solution for patch 37
+Writing primary solution for patch 38
+Writing primary solution for patch 39
+Writing primary solution for patch 40
+Writing primary solution for patch 41
+Writing primary solution for patch 42
+Writing primary solution for patch 43
+Writing primary solution for patch 44
+Writing primary solution for patch 45
+Writing primary solution for patch 46
+Writing secondary solution for patch 1
+Writing secondary solution for patch 2
+Writing secondary solution for patch 3
+Writing secondary solution for patch 4
+Writing secondary solution for patch 5
+Writing secondary solution for patch 6
+Writing secondary solution for patch 7
+Writing secondary solution for patch 8
+Writing secondary solution for patch 9
+Writing secondary solution for patch 10
+Writing secondary solution for patch 11
+Writing secondary solution for patch 12
+Writing secondary solution for patch 13
+Writing secondary solution for patch 14
+Writing secondary solution for patch 15
+Writing secondary solution for patch 16
+Writing secondary solution for patch 17
+Writing secondary solution for patch 18
+Writing secondary solution for patch 19
+Writing secondary solution for patch 20
+Writing secondary solution for patch 21
+Writing secondary solution for patch 22
+Writing secondary solution for patch 23
+Writing secondary solution for patch 24
+Writing secondary solution for patch 25
+Writing secondary solution for patch 26
+Writing secondary solution for patch 27
+Writing secondary solution for patch 28
+Writing secondary solution for patch 29
+Writing secondary solution for patch 30
+Writing secondary solution for patch 31
+Writing secondary solution for patch 32
+Writing secondary solution for patch 33
+Writing secondary solution for patch 34
+Writing secondary solution for patch 35
+Writing secondary solution for patch 36
+Writing secondary solution for patch 37
+Writing secondary solution for patch 38
+Writing secondary solution for patch 39
+Writing secondary solution for patch 40
+Writing secondary solution for patch 41
+Writing secondary solution for patch 42
+Writing secondary solution for patch 43
+Writing secondary solution for patch 44
+Writing secondary solution for patch 45
+Writing secondary solution for patch 46
+Writing projected solution for patch 1
+Writing projected solution for patch 2
+Writing projected solution for patch 3
+Writing projected solution for patch 4
+Writing projected solution for patch 5
+Writing projected solution for patch 6
+Writing projected solution for patch 7
+Writing projected solution for patch 8
+Writing projected solution for patch 9
+Writing projected solution for patch 10
+Writing projected solution for patch 11
+Writing projected solution for patch 12
+Writing projected solution for patch 13
+Writing projected solution for patch 14
+Writing projected solution for patch 15
+Writing projected solution for patch 16
+Writing projected solution for patch 17
+Writing projected solution for patch 18
+Writing projected solution for patch 19
+Writing projected solution for patch 20
+Writing projected solution for patch 21
+Writing projected solution for patch 22
+Writing projected solution for patch 23
+Writing projected solution for patch 24
+Writing projected solution for patch 25
+Writing projected solution for patch 26
+Writing projected solution for patch 27
+Writing projected solution for patch 28
+Writing projected solution for patch 29
+Writing projected solution for patch 30
+Writing projected solution for patch 31
+Writing projected solution for patch 32
+Writing projected solution for patch 33
+Writing projected solution for patch 34
+Writing projected solution for patch 35
+Writing projected solution for patch 36
+Writing projected solution for patch 37
+Writing projected solution for patch 38
+Writing projected solution for patch 39
+Writing projected solution for patch 40
+Writing projected solution for patch 41
+Writing projected solution for patch 42
+Writing projected solution for patch 43
+Writing projected solution for patch 44
+Writing projected solution for patch 45
+Writing projected solution for patch 46
+Writing element norms for patch 1
+Writing element norms for patch 2
+Writing element norms for patch 3
+Writing element norms for patch 4
+Writing element norms for patch 5
+Writing element norms for patch 6
+Writing element norms for patch 7
+Writing element norms for patch 8
+Writing element norms for patch 9
+Writing element norms for patch 10
+Writing element norms for patch 11
+Writing element norms for patch 12
+Writing element norms for patch 13
+Writing element norms for patch 14
+Writing element norms for patch 15
+Writing element norms for patch 16
+Writing element norms for patch 17
+Writing element norms for patch 18
+Writing element norms for patch 19
+Writing element norms for patch 20
+Writing element norms for patch 21
+Writing element norms for patch 22
+Writing element norms for patch 23
+Writing element norms for patch 24
+Writing element norms for patch 25
+Writing element norms for patch 26
+Writing element norms for patch 27
+Writing element norms for patch 28
+Writing element norms for patch 29
+Writing element norms for patch 30
+Writing element norms for patch 31
+Writing element norms for patch 32
+Writing element norms for patch 33
+Writing element norms for patch 34
+Writing element norms for patch 35
+Writing element norms for patch 36
+Writing element norms for patch 37
+Writing element norms for patch 38
+Writing element norms for patch 39
+Writing element norms for patch 40
+Writing element norms for patch 41
+Writing element norms for patch 42
+Writing element norms for patch 43
+Writing element norms for patch 44
+Writing element norms for patch 45
+Writing element norms for patch 46
+
+===============================================================
+===   Profiling results for LinEl
+=================================================================
+                      |       CPU time     |      Wall time     |
+Task                  |  Total(s)  Mean(ms)|  Total(s)  Mean(ms)| calls | thread
+----------------------+--------------------+--------------------+-------+-------
+ASMs3D::integrate(B)  |      0.23    19.10 |      0.06     5.35 |    12
+ASMs3D::integrate(I)  |    237.93  2586.22 |    161.02  1750.23 |    92
+ASMs3D::projectSolutio|      0.65     7.02 |      0.65     7.02 |    92
+Element assembly      |    229.84          |    158.66          |
+Equation solving      |     37.49          |     37.48          |
+Model input           |      0.07          |      0.07          |
+Model preprocessing   |      0.01          |      0.01          |
+Norm integration      |      8.46          |      2.47          |
+Postprocessing        |      0.59          |      0.59          |
+Solution projection   |      0.35          |      0.35          |
+Spline evaluation     |      1.31     3.67 |      0.98     2.73 |   358
+Other                 |     38.53          |     38.52          |
+----------------------+--------------------+--------------------+-------+-------
+Total time            |    315.35          |    238.15          |
+=================================================================

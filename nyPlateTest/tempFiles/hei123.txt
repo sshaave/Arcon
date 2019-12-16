@@ -1,0 +1,5 @@
+	<connection master="5" mface="3" slave="1" sface="3" orient="2"/>
+	<connection master="12" mface="1" slave="4" sface="3"/>
+	<connection master="28" mface="1" slave="23" sface="3"/>
+	<connection master="17" mface="3" slave="8" sface="3" orient="2"/>
+	<connection master="12" mface="2" slave="9" sface="3" orient="2"/>

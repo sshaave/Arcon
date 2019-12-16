@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!-- automatically generated file from script for Arcon Prosjekt AS. !-->
+
+<simulation>
+
+<!-- Geometry definitions -->
+<geometry>
+	<patchfile>G2/total.g2</patchfile>
+	<refine lowerpatch="1" u="3" v="3" w="2"/>
+	<topology>
+	    <connection master="1" mface="2" slave="2" sface="1"/>
+	    <connection master="1" mface="4" slave="4" sface="3" orient="0"/>
+	    <connection master="2" mface="2" slave="3" sface="1" orient="0"/>
+	    <connection master="2" mface="4" slave="7" sface="3"/>
+	    <connection master="3" mface="4" slave="9" sface="3" orient="0"/>
+	    <connection master="4" mface="2" slave="6" sface="3" orient="2"/>
+	    <connection master="4" mface="4" slave="10" sface="3" orient="0"/>
+	    <connection master="5" mface="1" slave="8" sface="2"/>
+	    <connection master="5" mface="2" slave="6" sface="1"/>
+	    <connection master="5" mface="3" slave="11" sface="3" orient="2"/>
+	    <connection master="5" mface="4" slave="13" sface="1" orient="1"/>
+	    <connection master="6" mface="2" slave="7" sface="1"/>
+	    <connection master="6" mface="4" slave="14" sface="1" orient="1"/>
+	    <connection master="7" mface="2" slave="8" sface="1"/>
+	    <connection master="7" mface="4" slave="15" sface="1" orient="1"/>
+	    <connection master="8" mface="4" slave="16" sface="1" orient="1"/>
+	    <connection master="8" mface="3" slave="9" sface="1" orient="0"/>
+	    <connection master="9" mface="4" slave="12" sface="3"/>
+	    <connection master="10" mface="2" slave="11" sface="1"/>
+	    <connection master="11" mface="2" slave="12" sface="1"/>
+	    <connection master="13" mface="2" slave="14" sface="2"/>
+	    <connection master="13" mface="2" slave="16" sface="2"/>
+	    <connection master="13" mface="2" slave="16" sface="2"/>
+	    <connection master="13" mface="3" slave="16" sface="4"/>
+	    <connection master="13" mface="4" slave="14" sface="3"/>
+	    <connection master="15" mface="4" slave="16" sface="3"/>
+	</topology>
+	<topologysets>
+		<set name="allEdges" type="face">
+			<item patch="1">3</item>
+			<item patch="2">3</item>
+			<item patch="3">3</item>
+			<item patch="10">4</item>
+			<item patch="11">4</item>
+			<item patch="12">4</item>
+		</set>
+		<set name="lastflate" type="face">
+			<item patch="13">6</item>
+			<item patch="14">6</item>
+			<item patch="15">6</item>
+			<item patch="16">6</item>
+		</set>
+	</topologysets>
+
+</geometry>
+
+<!-- Gauss quadrature scheme !-->
+<discretization>
+	<nGauss default="0"/>
+</discretization>
+
+<!-- Boundary conditions !-->
+<boundaryconditions>
+	<dirichlet set="allEdges" comp="123"/>
+	<neumann set="lastflate" direction="3" type="constant">62</neumann>
+	<neumann set="lastflate" direction="1" type="constant">0</neumann>
+</boundaryconditions>
+
+<!-- Problem specific block !-->
+<elasticity>
+	<isotropic E="2.1e5" nu="0.3" rho="7850e-6"/>
+</elasticity>
+
+</simulation>

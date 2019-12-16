@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!-- automatically generated file from script for Arcon Prosjekt AS. !-->
+
+<simulation>
+
+<!-- Geometry definitions -->
+<geometry>
+	<patchfile>G2/total.g2</patchfile>
+	<refine lowerpatch="1" u="3" v="3" w="3"/>
+	<topology>
+
+	</topology>
+	<collapse patch="1" face="2" edge="10"/>
+	<collapse patch="2" face="2" edge="10"/>
+	<collapse patch="3" face="2" edge="10"/>
+	<collapse patch="4" face="2" edge="10"/>
+	<topologysets>
+		<set name="allEdges" type="face">
+			<item patch="1">5</item>
+			<item patch="2">5</item>
+			<item patch="3">5</item>
+			<item patch="4">5</item>
+		</set>
+		<set name="lastflate" type="face">
+			<item patch="15">6</item>
+		</set>
+	</topologysets>
+</geometry>
+
+<!-- Gauss quadrature scheme !-->
+<discretization>
+	<nGauss default="0"/>
+</discretization>
+
+<!-- Boundary conditions !-->
+<boundaryconditions>
+	<dirichlet set="allEdges" comp="123"/>
+	<neumann set="lastflate" direction="3" type="constant">10</neumann>
+	<neumann set="lastflate" direction="1" type="constant">0</neumann>
+</boundaryconditions>
+
+<!-- Problem specific block !-->
+<elasticity>
+	<isotropic E="2.1e5" nu="0.3" rho="7850e-6"/>
+</elasticity>
+
+</simulation>
